@@ -102,7 +102,7 @@ function LiveDashboard({ t }) {
   return (
     <div className={`live-dash focus-${beat.focus}`}>
       <div className="live-top">
-        <div className="live-brand"><span className="live-dot" /> portiqa.app</div>
+        <div className="live-brand"><span className="live-dot" /> portiqa.pt</div>
         <div className="live-clock">{fmtClock(t)}</div>
       </div>
 
