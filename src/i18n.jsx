@@ -227,7 +227,7 @@ const DICT = {
     "ft.legal.rnal": "RNAL",
 
     // Outcome captions
-    "out.joao": "O convidado recebe resposta antes de si ter acordado.",
+    "out.joao": "O convidado recebe resposta antes de ter acordado.",
     "out.hannah": "Uma dúvida em alemão, resolvida sem tradutor.",
     "out.fill": "A semana toda a organizar-se sozinha.",
     "out.reroute": "Alguém cancelou? Nova re-atribui em segundos.",
