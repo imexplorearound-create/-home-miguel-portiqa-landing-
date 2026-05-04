@@ -508,13 +508,32 @@ export function Integrations() {
 /* ---------- Signup / Founding 50 ---------- */
 export function Signup() {
   const { t, lang } = useT();
-  const [form, setForm] = useState({ name: "", email: "", company: "", units: "" });
+  const [form, setForm] = useState({ name: "", email: "", whatsapp: "", company: "", units: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
-  const handle = (e) => {
+  const handle = async (e) => {
     e.preventDefault();
-    if (!form.email || !form.name) return;
-    setSubmitted(true);
+    if (!form.email || !form.name || loading) return;
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(data.error || (lang === "pt" ? "Falha na inscrição. Tente outra vez." : "Sign-up failed. Please try again."));
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(err.message || (lang === "pt" ? "Erro inesperado." : "Unexpected error."));
+    } finally {
+      setLoading(false);
+    }
   };
   const firstName = form.name.split(" ")[0] || (lang === "pt" ? "amigo" : "friend");
   return (
@@ -539,6 +558,10 @@ export function Signup() {
                   <input required type="email" value={form.email} onChange={set("email")} placeholder="maria@exemplo.pt" />
                 </div>
                 <div className="field">
+                  <label>{t("sig.whatsapp")}</label>
+                  <input type="tel" inputMode="tel" autoComplete="tel" value={form.whatsapp} onChange={set("whatsapp")} placeholder={t("sig.whatsapp.placeholder")} />
+                </div>
+                <div className="field">
                   <label>{t("sig.company")}</label>
                   <input value={form.company} onChange={set("company")} placeholder="Silva Stays" />
                 </div>
@@ -559,8 +582,15 @@ export function Signup() {
                     <span>{t("sig.meta.card")}</span>
                     <span>{t("sig.meta.pilot")}</span>
                   </div>
-                  <button className="signup-submit" type="submit">{t("sig.submit")}</button>
+                  <button className="signup-submit" type="submit" disabled={loading}>
+                    {loading ? (lang === "pt" ? "A enviar…" : "Sending…") : t("sig.submit")}
+                  </button>
                 </div>
+                {error && (
+                  <div role="alert" style={{marginTop:14, padding:"10px 14px", background:"rgba(220,80,80,0.08)", border:"1px solid rgba(220,80,80,0.3)", borderRadius:6, color:"#c53030", fontSize:13}}>
+                    {error}
+                  </div>
+                )}
               </form>
             ) : (
               <div className="signup-success">
@@ -603,10 +633,8 @@ export function Footer() {
         </div>
         <div className="footer-col">
           <h4>{t("ft.legal")}</h4>
-          <a href="#">{t("ft.legal.privacy")}</a>
-          <a href="#">{t("ft.legal.terms")}</a>
-          <a href="#">{t("ft.legal.gdpr")}</a>
-          <a href="#">{t("ft.legal.rnal")}</a>
+          <a href="/privacidade">{t("ft.legal.privacy")}</a>
+          <a href="/privacidade#dados">{t("ft.legal.gdpr")}</a>
         </div>
       </div>
     </footer>

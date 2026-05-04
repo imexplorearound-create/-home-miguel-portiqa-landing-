@@ -49,3 +49,5 @@ Allow: /
 
 User-agent: Meta-ExternalAgent
 Allow: /
+
+Sitemap: https://portiqa.pt/sitemap.xml
