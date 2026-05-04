@@ -505,7 +505,7 @@ export function Integrations() {
   );
 }
 
-/* ---------- Signup / Founding 50 ---------- */
+/* ---------- Signup / Founding 20 ---------- */
 export function Signup() {
   const { t, lang } = useT();
   const [form, setForm] = useState({ name: "", email: "", whatsapp: "", company: "", units: "" });

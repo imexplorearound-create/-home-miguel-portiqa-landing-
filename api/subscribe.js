@@ -1,5 +1,5 @@
 // Vercel Serverless Function — POST /api/subscribe
-// Handles the Portiqa Founding 50 waitlist signup. Three things in one call:
+// Handles the Portiqa Founding 20 waitlist signup. Three things in one call:
 //   1. Add the contact to a Resend Audience
 //   2. Send a welcome email to the subscriber
 //   3. Notify the founders inbox with the full submission data
@@ -97,7 +97,7 @@ export default async function handler(req, res) {
         reply_to: notificationEmail || undefined,
         tags: [
           { name: "type", value: "welcome" },
-          { name: "campaign", value: "founding-50" },
+          { name: "campaign", value: "founding-20" },
         ],
       }),
     });
@@ -120,7 +120,7 @@ export default async function handler(req, res) {
           from: fromEmail,
           to: [notificationEmail],
           reply_to: email,
-          subject: `[Portiqa] Nova inscrição Founding 50 — ${name}`,
+          subject: `[Portiqa] Nova inscrição Founding 20 — ${name}`,
           text: notificationText({ name, email, phone, companyClean, unitsClean }),
         }),
       });
@@ -226,7 +226,7 @@ function welcomeEmailHtml({ firstName }) {
 
 function notificationText({ name, email, phone, companyClean, unitsClean }) {
   return [
-    "Nova inscrição na lista de espera Portiqa Founding 50.",
+    "Nova inscrição na lista de espera Portiqa Founding 20.",
     "",
     `Nome:     ${name}`,
     `Email:    ${email}`,
