@@ -119,14 +119,31 @@ export function Dashboard() {
 
 /* ---------- Hero variants ---------- */
 export function HeroA({ headline }) {
-  const { t } = useT();
+  const { t, lang } = useT();
   return (
     <section className="hero-a" id="top">
       <div className="container">
         <div className="inner">
           <span className="eyebrow anim">{t("hero.eyebrow.a")}</span>
           <h1 className="display anim anim-d1" dangerouslySetInnerHTML={{__html: headline || t("hero.headline.a")}} />
-          <p className="lede anim anim-d2" style={{textAlign:"center"}}>
+          <p
+            className="hero-alt-headline anim anim-d1"
+            lang={lang === "pt" ? "en" : "pt"}
+            style={{
+              fontFamily: "var(--font-serif)",
+              fontStyle: "italic",
+              fontWeight: 400,
+              fontSize: "clamp(1rem, 1.6vw, 1.35rem)",
+              lineHeight: 1.35,
+              textAlign: "center",
+              color: "var(--muted)",
+              margin: "8px 0 0",
+              letterSpacing: "0.005em",
+            }}
+          >
+            {t("hero.headline.a.alt")}
+          </p>
+          <p className="lede anim anim-d2" style={{textAlign:"center", marginTop:24}}>
             {t("hero.lede.a")}
           </p>
           <div className="cta-row anim anim-d3">

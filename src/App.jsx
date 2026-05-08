@@ -98,7 +98,9 @@ export default function App() {
     return () => window.removeEventListener("message", handler);
   }, []);
 
-  const headline = state.hero === "A" ? state.headline : state.hero === "B" ? state.headlineB : state.headlineC;
+  const headlineKey = state.hero === "A" ? "headline" : state.hero === "B" ? "headlineB" : "headlineC";
+  const isHeadlineEdited = state[headlineKey] !== TWEAK_DEFAULTS[headlineKey];
+  const headline = isHeadlineEdited ? state[headlineKey] : null;
   const HeroComp = state.hero === "A" ? HeroA : state.hero === "B" ? HeroB : HeroC;
 
   return (
