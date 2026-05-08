@@ -363,11 +363,10 @@ export function Compare() {
     ["cmp.row.2", "yes", "no", "no"],
     ["cmp.row.3", "yes", "no", "no"],
     ["cmp.row.4", "yes", "no", "no"],
-    ["cmp.row.5", "yes", "no", "no"],
-    ["cmp.row.6", "yes", "yes", "partial"],
-    ["cmp.row.7", "yes", "yes", "no"],
-    ["cmp.row.8", "yes", "partial", "no"],
-    ["cmp.row.9", "cmp.price.portiqa", "cmp.price.global", "cmp.price.excel"],
+    ["cmp.row.5", "yes", "yes", "partial"],
+    ["cmp.row.6", "yes", "yes", "no"],
+    ["cmp.row.7", "yes", "partial", "no"],
+    ["cmp.row.8", "cmp.price.portiqa", "cmp.price.global", "cmp.price.excel"],
   ];
   const cell = (v) => {
     if (v === "yes") return <span className="check">{t("cmp.cell.included")}</span>;
@@ -408,7 +407,7 @@ export function Compare() {
 /* ---------- FAQ (extractable Q&A + FAQPage schema) ---------- */
 export function Faq() {
   const { t } = useT();
-  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => ({
+  const items = [1, 2, 3, 4, 5, 6, 7, 8].map(i => ({
     q: t(`faq.q${i}`),
     a: t(`faq.a${i}`),
   }));
@@ -476,7 +475,6 @@ export function Integrations() {
     ["Booking.com",t("int.booking")],
     ["VRBO",       t("int.vrbo")],
     ["Expedia",    t("int.expedia")],
-    ["MB Way",     t("int.mbway")],
     ["Stripe",     t("int.stripe")],
   ];
   return (
