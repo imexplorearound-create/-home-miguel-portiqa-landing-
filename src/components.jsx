@@ -508,9 +508,11 @@ export function Signup() {
   const { t, lang } = useT();
   const [form, setForm] = useState({ name: "", email: "", whatsapp: "", company: "", units: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [submittedAsWaitlist, setSubmittedAsWaitlist] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
+  const isWaitlist = form.units === "1–4";
   const handle = async (e) => {
     e.preventDefault();
     if (!form.email || !form.name || loading) return;
@@ -526,6 +528,7 @@ export function Signup() {
       if (!res.ok) {
         throw new Error(data.error || (lang === "pt" ? "Falha na inscrição. Tente outra vez." : "Sign-up failed. Please try again."));
       }
+      setSubmittedAsWaitlist(isWaitlist);
       setSubmitted(true);
     } catch (err) {
       setError(err.message || (lang === "pt" ? "Erro inesperado." : "Unexpected error."));
@@ -574,6 +577,11 @@ export function Signup() {
                     <option>50+</option>
                   </select>
                 </div>
+                {isWaitlist && (
+                  <div className="full" role="note" style={{padding:"12px 14px", background:"rgba(176,138,44,0.08)", border:"1px solid rgba(176,138,44,0.28)", borderRadius:6, fontSize:13, lineHeight:1.55, color:"var(--ink)"}}>
+                    {t("sig.waitlist.note")}
+                  </div>
+                )}
                 <div className="full" style={{display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:14, marginTop:6}}>
                   <div className="signup-meta">
                     <span>{t("sig.meta.gdpr")}</span>
@@ -581,7 +589,7 @@ export function Signup() {
                     <span>{t("sig.meta.pilot")}</span>
                   </div>
                   <button className="signup-submit" type="submit" disabled={loading}>
-                    {loading ? (lang === "pt" ? "A enviar…" : "Sending…") : t("sig.submit")}
+                    {loading ? (lang === "pt" ? "A enviar…" : "Sending…") : t(isWaitlist ? "sig.waitlist.submit" : "sig.submit")}
                   </button>
                 </div>
                 {error && (
@@ -592,9 +600,9 @@ export function Signup() {
               </form>
             ) : (
               <div className="signup-success">
-                <div style={{fontFamily:"var(--font-mono)", fontSize:11, letterSpacing:"0.14em", textTransform:"uppercase", color:"var(--accent)", marginBottom:10}}>{t("sig.success.kicker")}</div>
+                <div style={{fontFamily:"var(--font-mono)", fontSize:11, letterSpacing:"0.14em", textTransform:"uppercase", color:"var(--accent)", marginBottom:10}}>{t(submittedAsWaitlist ? "sig.success.waitlist.kicker" : "sig.success.kicker")}</div>
                 <div style={{fontSize:18, marginBottom:6, fontFamily:"var(--font-serif)"}}>{t("sig.success.thanks", { name: firstName })}</div>
-                <div style={{fontSize:14, color:"rgba(244,239,230,0.72)"}} dangerouslySetInnerHTML={{__html: t("sig.success.body", { email: form.email })}} />
+                <div style={{fontSize:14, color:"rgba(244,239,230,0.72)"}} dangerouslySetInnerHTML={{__html: t(submittedAsWaitlist ? "sig.success.waitlist.body" : "sig.success.body", { email: form.email })}} />
               </div>
             )}
           </div>
