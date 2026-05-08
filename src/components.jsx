@@ -578,7 +578,7 @@ export function Signup() {
                   </select>
                 </div>
                 {isWaitlist && (
-                  <div className="full" role="note" style={{padding:"12px 14px", background:"rgba(176,138,44,0.08)", border:"1px solid rgba(176,138,44,0.28)", borderRadius:6, fontSize:13, lineHeight:1.55, color:"var(--ink)"}}>
+                  <div className="full" role="note" style={{padding:"12px 14px", background:"rgba(176,138,44,0.14)", border:"1px solid rgba(176,138,44,0.45)", borderRadius:6, fontSize:13, lineHeight:1.55, color:"rgba(244,239,230,0.92)"}}>
                     {t("sig.waitlist.note")}
                   </div>
                 )}
