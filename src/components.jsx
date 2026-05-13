@@ -22,6 +22,17 @@ export function Logo() {
   );
 }
 
+export function AnnouncementBar() {
+  const { t } = useT();
+  return (
+    <a className="announce-bar" href="#signup">
+      <span className="announce-dot" aria-hidden="true" />
+      <span className="announce-text">{t("announce.text")}</span>
+      <span className="announce-arrow" aria-hidden="true">→</span>
+    </a>
+  );
+}
+
 export function Nav() {
   const { t } = useT();
   return (

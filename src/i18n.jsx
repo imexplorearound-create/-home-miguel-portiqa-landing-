@@ -10,6 +10,8 @@ const LangContext = React.createContext({ lang: DEFAULT_LANG, setLang: () => {},
 
 const DICT = {
   pt: {
+    // ----- Announcement bar -----
+    "announce.text": "Beta privada — 20 vagas · Lançamento Set/Out 2026",
     // ----- Nav -----
     "nav.live": "Ver a funcionar",
     "nav.problem": "O dia",
@@ -243,6 +245,8 @@ const DICT = {
   },
 
   en: {
+    // ----- Announcement bar -----
+    "announce.text": "Private beta — 20 spots · Public launch Sep/Oct 2026",
     // ----- Nav -----
     "nav.live": "See it working",
     "nav.problem": "The day",

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
+  AnnouncementBar,
   Nav,
   HeroA,
   HeroB,
@@ -105,6 +106,7 @@ export default function App() {
 
   return (
     <>
+      <AnnouncementBar />
       <Nav />
       <HeroComp headline={headline} />
       <Definition />
