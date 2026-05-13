@@ -608,7 +608,7 @@ section { padding: 96px 0; }
 }
 .integ-card small { display: block; font-size: 12px; color: var(--muted); font-weight: 400; font-family: var(--font-sans); }
 
-/* ====== Signup / Founding 50 ====== */
+/* ====== Signup / Founding 20 ====== */
 .signup-wrap { position: relative; overflow: hidden; border-radius: 18px; }
 .signup {
   background: linear-gradient(135deg, var(--midnight), #1A2942 60%, #2A3D5C 100%);
@@ -701,6 +701,8 @@ footer { border-top: 1px solid var(--line); padding: 52px 0 56px; font-size: 13p
 }
 .footer-col a { display: block; padding: 4px 0; }
 .footer-col a:hover { color: var(--accent); }
+.footer-disclaimer { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); }
+.footer-disclaimer p { font-size: 11px; line-height: 1.6; color: var(--muted); opacity: 0.75; max-width: 760px; margin: 0; }
 
 /* ====== Tweaks panel ====== */
 .tweaks {

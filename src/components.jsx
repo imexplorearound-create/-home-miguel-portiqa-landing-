@@ -660,6 +660,9 @@ export function Footer() {
           <a href="/privacidade#dados">{t("ft.legal.gdpr")}</a>
         </div>
       </div>
+      <div className="container footer-disclaimer">
+        <p>{t("ft.disclaimer")}</p>
+      </div>
     </footer>
   );
 }

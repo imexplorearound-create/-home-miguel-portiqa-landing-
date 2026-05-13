@@ -228,6 +228,7 @@ const DICT = {
     "ft.legal.terms": "Termos",
     "ft.legal.gdpr": "RGPD",
     "ft.legal.rnal": "RNAL",
+    "ft.disclaimer": "Métricas e estimativas apresentadas são metas em validação com os Founding 20 e podem variar consoante o perfil de cada operação.",
 
     // Outcome captions
     "out.joao": "O convidado recebe resposta antes de ter acordado.",
@@ -458,6 +459,7 @@ const DICT = {
     "ft.legal.terms": "Terms",
     "ft.legal.gdpr": "GDPR",
     "ft.legal.rnal": "RNAL",
+    "ft.disclaimer": "Metrics and estimates shown are targets under validation with the Founding 20 and may vary depending on each operation's profile.",
 
     // Outcome captions — EN tone: active, direct
     "out.joao": "Your guest gets an answer before you wake up.",
