@@ -48,7 +48,7 @@ const DICT = {
 
     "problem.resolution": "É aqui que a Portiqa entra →",
 
-    "logos.label": "Sincronização nativa · Atualização a 5 min · Anti-overbooking",
+    "logos.label": "Sincronização com Airbnb, Booking.com, VRBO e Expedia. Anti-overbooking integrado.",
 
     // ----- See it working -----
     "sw.eyebrow": "Veja a funcionar",
@@ -280,7 +280,7 @@ const DICT = {
 
     "problem.resolution": "This is where Portiqa comes in →",
 
-    "logos.label": "Native sync · 5-minute refresh · Anti-overbooking",
+    "logos.label": "Sync with Airbnb, Booking.com, VRBO and Expedia. Anti-overbooking integrated.",
 
     // See it working
     "sw.eyebrow": "See it working",
