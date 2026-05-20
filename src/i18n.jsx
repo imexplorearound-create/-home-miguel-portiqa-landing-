@@ -230,7 +230,23 @@ const DICT = {
     "ft.legal.terms": "Termos",
     "ft.legal.gdpr": "RGPD",
     "ft.legal.rnal": "RNAL",
+    "ft.legal.cookies": "Cookies",
     "ft.disclaimer": "Métricas e estimativas apresentadas são metas em validação com os Founding 20 e podem variar consoante o perfil de cada operação.",
+
+    // Cookie banner
+    "cookie.kicker": "Preferências de cookies",
+    "cookie.body": "Usamos cookies para fazer o site funcionar e, com a sua autorização, perceber como é visitado e mostrar conteúdo relevante.",
+    "cookie.learnMore": "Saber mais",
+    "cookie.acceptAll": "Aceitar tudo",
+    "cookie.essentialOnly": "Só essenciais",
+    "cookie.customize": "Personalizar preferências",
+    "cookie.savePrefs": "Guardar preferências",
+    "cookie.essential.title": "Essenciais (sempre activos)",
+    "cookie.essential.desc": "Necessários para o funcionamento do site.",
+    "cookie.analytics.title": "Analytics",
+    "cookie.analytics.desc": "Ajudam-nos a perceber como visita o site (Google Analytics).",
+    "cookie.marketing.title": "Marketing",
+    "cookie.marketing.desc": "Para personalizar e medir campanhas em plataformas como Meta e LinkedIn.",
 
     // Outcome captions
     "out.joao": "O convidado recebe resposta antes de ter acordado.",
@@ -463,7 +479,23 @@ const DICT = {
     "ft.legal.terms": "Terms",
     "ft.legal.gdpr": "GDPR",
     "ft.legal.rnal": "RNAL",
+    "ft.legal.cookies": "Cookies",
     "ft.disclaimer": "Metrics and estimates shown are targets under validation with the Founding 20 and may vary depending on each operation's profile.",
+
+    // Cookie banner
+    "cookie.kicker": "Cookie preferences",
+    "cookie.body": "We use cookies to make the site work and, with your permission, to understand how it's used and show relevant content.",
+    "cookie.learnMore": "Learn more",
+    "cookie.acceptAll": "Accept all",
+    "cookie.essentialOnly": "Essentials only",
+    "cookie.customize": "Customise preferences",
+    "cookie.savePrefs": "Save preferences",
+    "cookie.essential.title": "Essential (always on)",
+    "cookie.essential.desc": "Needed for the site to function.",
+    "cookie.analytics.title": "Analytics",
+    "cookie.analytics.desc": "Help us understand how you use the site (Google Analytics).",
+    "cookie.marketing.title": "Marketing",
+    "cookie.marketing.desc": "To personalise and measure campaigns on platforms like Meta and LinkedIn.",
 
     // Outcome captions — EN tone: active, direct
     "out.joao": "Your guest gets an answer before you wake up.",

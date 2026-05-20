@@ -558,6 +558,15 @@ export function Signup() {
       }
       setSubmittedAsWaitlist(isWaitlist);
       setSubmitted(true);
+      if (typeof window !== "undefined") {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "lead_signup",
+          method: "founding_20",
+          tier: isWaitlist ? "waitlist" : "founding_20",
+          units: form.units || "(unset)",
+        });
+      }
     } catch (err) {
       setError(err.message || (lang === "pt" ? "Erro inesperado." : "Unexpected error."));
     } finally {
@@ -669,12 +678,197 @@ export function Footer() {
           <h4>{t("ft.legal")}</h4>
           <a href="/privacidade">{t("ft.legal.privacy")}</a>
           <a href="/privacidade#dados">{t("ft.legal.gdpr")}</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new Event("portiqa:open-cookies")); }}>{t("ft.legal.cookies")}</a>
         </div>
       </div>
       <div className="container footer-disclaimer">
         <p>{t("ft.disclaimer")}</p>
       </div>
     </footer>
+  );
+}
+
+/* ---------- Cookie Banner (Consent Mode v2) ---------- */
+const CONSENT_KEY = "portiqa_consent_v1";
+
+function applyConsent({ analytics, marketing }) {
+  if (typeof window === "undefined") return;
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "consent_update",
+  });
+  // gtag('consent','update',...) — emit raw command so GTM picks it up
+  window.dataLayer.push([
+    "consent",
+    "update",
+    {
+      analytics_storage: analytics ? "granted" : "denied",
+      ad_storage: marketing ? "granted" : "denied",
+      ad_user_data: marketing ? "granted" : "denied",
+      ad_personalization: marketing ? "granted" : "denied",
+    },
+  ]);
+}
+
+export function CookieBanner() {
+  const { t } = useT();
+  const [visible, setVisible] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [analytics, setAnalytics] = useState(true);
+  const [marketing, setMarketing] = useState(false);
+
+  useEffect(() => {
+    let stored = null;
+    try { stored = JSON.parse(localStorage.getItem(CONSENT_KEY) || "null"); } catch (e) {}
+    if (!stored) {
+      setVisible(true);
+    } else {
+      setAnalytics(!!stored.analytics);
+      setMarketing(!!stored.marketing);
+    }
+    const open = () => { setVisible(true); setExpanded(true); };
+    window.addEventListener("portiqa:open-cookies", open);
+    return () => window.removeEventListener("portiqa:open-cookies", open);
+  }, []);
+
+  const save = (a, m) => {
+    const payload = { analytics: !!a, marketing: !!m, ts: new Date().toISOString() };
+    try { localStorage.setItem(CONSENT_KEY, JSON.stringify(payload)); } catch (e) {}
+    applyConsent(payload);
+    setVisible(false);
+    setExpanded(false);
+  };
+
+  if (!visible) return null;
+
+  return (
+    <div
+      role="dialog"
+      aria-live="polite"
+      aria-label="Preferências de cookies"
+      style={{
+        position: "fixed",
+        bottom: 20,
+        left: 20,
+        right: 20,
+        maxWidth: 440,
+        zIndex: 9999,
+        background: "var(--surface, #fff)",
+        color: "var(--ink, #1a1a1a)",
+        border: "1px solid rgba(176,138,44,0.35)",
+        borderRadius: 8,
+        boxShadow: "0 24px 60px rgba(0,0,0,0.25)",
+        padding: "18px 18px 16px",
+        fontSize: 13,
+        lineHeight: 1.55,
+      }}
+    >
+      <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--accent, #b08a2c)", marginBottom: 8 }}>
+        {t("cookie.kicker")}
+      </div>
+      <div style={{ fontSize: 13, marginBottom: 14, color: "var(--ink-soft, rgba(0,0,0,0.72))" }}>
+        {t("cookie.body")} <a href="/privacidade#cookies" style={{ color: "var(--accent, #b08a2c)", textDecoration: "underline" }}>{t("cookie.learnMore")}</a>
+      </div>
+
+      {expanded && (
+        <div style={{ borderTop: "1px solid rgba(0,0,0,0.08)", paddingTop: 12, marginBottom: 14 }}>
+          <label style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px 0", cursor: "default" }}>
+            <span>
+              <strong style={{ display: "block" }}>{t("cookie.essential.title")}</strong>
+              <span style={{ color: "var(--ink-soft, rgba(0,0,0,0.6))", fontSize: 12 }}>{t("cookie.essential.desc")}</span>
+            </span>
+            <input type="checkbox" checked disabled style={{ marginLeft: 14 }} />
+          </label>
+          <label style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px 0", cursor: "pointer" }}>
+            <span>
+              <strong style={{ display: "block" }}>{t("cookie.analytics.title")}</strong>
+              <span style={{ color: "var(--ink-soft, rgba(0,0,0,0.6))", fontSize: 12 }}>{t("cookie.analytics.desc")}</span>
+            </span>
+            <input type="checkbox" checked={analytics} onChange={(e) => setAnalytics(e.target.checked)} style={{ marginLeft: 14 }} />
+          </label>
+          <label style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px 0", cursor: "pointer" }}>
+            <span>
+              <strong style={{ display: "block" }}>{t("cookie.marketing.title")}</strong>
+              <span style={{ color: "var(--ink-soft, rgba(0,0,0,0.6))", fontSize: 12 }}>{t("cookie.marketing.desc")}</span>
+            </span>
+            <input type="checkbox" checked={marketing} onChange={(e) => setMarketing(e.target.checked)} style={{ marginLeft: 14 }} />
+          </label>
+        </div>
+      )}
+
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+        <button
+          type="button"
+          onClick={() => save(true, true)}
+          style={{
+            flex: "1 1 140px",
+            padding: "10px 14px",
+            background: "var(--accent, #b08a2c)",
+            color: "#fff",
+            border: 0,
+            borderRadius: 6,
+            fontSize: 13,
+            fontWeight: 600,
+            cursor: "pointer",
+          }}
+        >
+          {t("cookie.acceptAll")}
+        </button>
+        <button
+          type="button"
+          onClick={() => save(false, false)}
+          style={{
+            flex: "1 1 140px",
+            padding: "10px 14px",
+            background: "transparent",
+            color: "var(--ink, #1a1a1a)",
+            border: "1px solid rgba(0,0,0,0.2)",
+            borderRadius: 6,
+            fontSize: 13,
+            cursor: "pointer",
+          }}
+        >
+          {t("cookie.essentialOnly")}
+        </button>
+        {!expanded ? (
+          <button
+            type="button"
+            onClick={() => setExpanded(true)}
+            style={{
+              flex: "1 1 100%",
+              padding: "8px 0 0",
+              background: "transparent",
+              color: "var(--ink-soft, rgba(0,0,0,0.55))",
+              border: 0,
+              fontSize: 12,
+              cursor: "pointer",
+              textDecoration: "underline",
+            }}
+          >
+            {t("cookie.customize")}
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={() => save(analytics, marketing)}
+            style={{
+              flex: "1 1 100%",
+              marginTop: 4,
+              padding: "10px 14px",
+              background: "transparent",
+              color: "var(--accent, #b08a2c)",
+              border: "1px solid var(--accent, #b08a2c)",
+              borderRadius: 6,
+              fontSize: 13,
+              fontWeight: 600,
+              cursor: "pointer",
+            }}
+          >
+            {t("cookie.savePrefs")}
+          </button>
+        )}
+      </div>
+    </div>
   );
 }
 

@@ -16,6 +16,7 @@ import {
   Integrations,
   Signup,
   Footer,
+  CookieBanner,
 } from "./components.jsx";
 import { SeeItWorking } from "./see-working.jsx";
 import { useTheme } from "./theme.jsx";
@@ -122,6 +123,7 @@ export default function App() {
       <Faq />
       <Footer />
       <Tweaks state={state} setState={setState} visible={tweaksVisible} />
+      <CookieBanner />
     </>
   );
 }
