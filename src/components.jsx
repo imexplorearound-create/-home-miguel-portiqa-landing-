@@ -588,24 +588,24 @@ export function Signup() {
             {!submitted ? (
               <form className="signup-form" onSubmit={handle}>
                 <div className="field">
-                  <label>{t("sig.name")}</label>
-                  <input required value={form.name} onChange={set("name")} placeholder={lang === "pt" ? "Maria Silva" : "Maria Silva"} />
+                  <label htmlFor="signup-name">{t("sig.name")}</label>
+                  <input id="signup-name" name="name" required autoComplete="name" value={form.name} onChange={set("name")} placeholder="Maria Silva" />
                 </div>
                 <div className="field">
-                  <label>{t("sig.email")}</label>
-                  <input required type="email" value={form.email} onChange={set("email")} placeholder="maria@exemplo.pt" />
+                  <label htmlFor="signup-email">{t("sig.email")}</label>
+                  <input id="signup-email" name="email" required type="email" autoComplete="email" value={form.email} onChange={set("email")} placeholder="maria@exemplo.pt" />
                 </div>
                 <div className="field">
-                  <label>{t("sig.whatsapp")}</label>
-                  <input type="tel" inputMode="tel" autoComplete="tel" value={form.whatsapp} onChange={set("whatsapp")} placeholder={t("sig.whatsapp.placeholder")} />
+                  <label htmlFor="signup-whatsapp">{t("sig.whatsapp")}</label>
+                  <input id="signup-whatsapp" name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" value={form.whatsapp} onChange={set("whatsapp")} placeholder={t("sig.whatsapp.placeholder")} />
                 </div>
                 <div className="field">
-                  <label>{t("sig.company")}</label>
-                  <input value={form.company} onChange={set("company")} placeholder="Silva Stays" />
+                  <label htmlFor="signup-company">{t("sig.company")}</label>
+                  <input id="signup-company" name="company" autoComplete="organization" value={form.company} onChange={set("company")} placeholder="Silva Stays" />
                 </div>
                 <div className="field">
-                  <label>{t("sig.units")}</label>
-                  <select value={form.units} onChange={set("units")}>
+                  <label htmlFor="signup-units">{t("sig.units")}</label>
+                  <select id="signup-units" name="units" value={form.units} onChange={set("units")}>
                     <option value="">{t("sig.units.placeholder")}</option>
                     <option>1–4</option>
                     <option>5–10</option>
