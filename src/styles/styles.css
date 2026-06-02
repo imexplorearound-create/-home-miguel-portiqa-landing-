@@ -106,8 +106,18 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--line);
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
-.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: 0.04em; font-size: 16px; text-transform: uppercase; }
+.brand { display: inline-flex; align-items: center; gap: 10px; }
 .brand svg { display: block; }
+.brand .wordmark {
+  font-family: "Instrument Serif", "Source Serif 4", "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  text-transform: none;
+}
+.brand .wordmark i { font-style: italic; color: var(--accent); }
 .nav-links { display: flex; gap: 28px; align-items: center; font-size: 14px; color: var(--ink-2); }
 .nav-links a { white-space: nowrap; }
 .nav-links a:hover { color: var(--accent); }

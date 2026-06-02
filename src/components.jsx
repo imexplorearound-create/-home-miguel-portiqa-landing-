@@ -15,9 +15,9 @@ export function LogoMark({ size = 22 }) {
 
 export function Logo() {
   return (
-    <a className="brand" href="#top">
+    <a className="brand" href="#top" aria-label="Portiqa">
       <LogoMark size={22} />
-      <span>Portiqa</span>
+      <span className="wordmark" aria-hidden="true">porti<i>q</i>a</span>
     </a>
   );
 }
