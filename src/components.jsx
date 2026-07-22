@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useT, LangToggle } from "./i18n.jsx";
 import { ThemeToggle } from "./theme.jsx";
+import { trackMetaLead } from "./MetaPixel.jsx";
 
 /* ---------- Logo: "Golden Threshold" minimal arch ---------- */
 export function LogoMark({ size = 22 }) {
@@ -567,6 +568,10 @@ export function Signup() {
           units: form.units || "(unset)",
         });
       }
+      // Meta Pixel Lead — only fires on a successful submit (res.ok), and
+      // internally no-ops unless the pixel is initialized (marketing consent
+      // given). Never fires on button click or on a failed submit.
+      trackMetaLead();
     } catch (err) {
       setError(err.message || (lang === "pt" ? "Erro inesperado." : "Unexpected error."));
     } finally {
@@ -708,6 +713,13 @@ function applyConsent({ analytics, marketing }) {
       ad_personalization: marketing ? "granted" : "denied",
     },
   ]);
+  // Notify consent-gated integrations (e.g. Meta Pixel) so they can init the
+  // moment marketing consent flips to granted. Denied → listeners no-op.
+  window.dispatchEvent(
+    new CustomEvent("portiqa:consent", {
+      detail: { analytics: !!analytics, marketing: !!marketing },
+    })
+  );
 }
 
 export function CookieBanner() {

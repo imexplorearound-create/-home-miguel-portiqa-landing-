@@ -19,6 +19,7 @@ import {
   CookieBanner,
 } from "./components.jsx";
 import { SeeItWorking } from "./see-working.jsx";
+import { MetaPixel } from "./MetaPixel.jsx";
 import { useTheme } from "./theme.jsx";
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
@@ -124,6 +125,7 @@ export default function App() {
       <Footer />
       <Tweaks state={state} setState={setState} visible={tweaksVisible} />
       <CookieBanner />
+      <MetaPixel />
     </>
   );
 }

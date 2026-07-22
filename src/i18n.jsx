@@ -11,7 +11,7 @@ const LangContext = React.createContext({ lang: DEFAULT_LANG, setLang: () => {},
 const DICT = {
   pt: {
     // ----- Announcement bar -----
-    "announce.text": "Beta privada — 20 vagas · Lançamento Set/Out 2026",
+    "announce.text": "Beta privada — 20 vagas · Lançamento a anunciar",
     // ----- Nav -----
     "nav.live": "Ver a funcionar",
     "nav.problem": "O dia",
@@ -171,7 +171,7 @@ const DICT = {
     "sig.badge": "Founding 20 · Vagas limitadas",
     "sig.eyebrow": "Acesso antecipado",
     "sig.h2": "Encontre o seu <em>porto</em> na gestão de alojamento.",
-    "sig.lede": "A Portiqa está em beta privada com um punhado de gestores portugueses. Os Founding 20 ficam com 30% vitalício, canal direto no Slack com a equipa e primeira palavra no roadmap.",
+    "sig.lede": "A Portiqa está em beta privada com um punhado de gestores portugueses. Os Founding 20 ficam com 30% de desconto com preço congelado 24 meses — e nunca pagam mais de 80% do preço de tabela — canal direto no Slack com a equipa e primeira palavra no roadmap.",
     "sig.name": "Nome completo",
     "sig.email": "Email",
     "sig.whatsapp": "WhatsApp (opcional)",
@@ -183,13 +183,13 @@ const DICT = {
     "sig.meta.card": "● Sem cartão",
     "sig.meta.pilot": "● Piloto de 14 dias",
     "sig.submit": "Reservar a minha vaga →",
-    "sig.waitlist.note": "Adoramos ter-te connosco. Founding 20 é exclusivo para gestores com 5+ propriedades — entras automaticamente na waitlist do tier público que lança em Set/Out 2026.",
+    "sig.waitlist.note": "Adoramos ter-te connosco. Founding 20 é exclusivo para gestores com 5+ propriedades — entras automaticamente na waitlist do tier público, com data de lançamento a anunciar.",
     "sig.waitlist.submit": "Entrar na waitlist →",
     "sig.success.kicker": "✓ Está na lista dos Founding 20",
     "sig.success.thanks": "Obrigado, {name}.",
     "sig.success.body": "Enviaremos um email para <b>{email}</b> quando a sua vaga abrir. Entretanto, responda com qualquer coisa sobre o seu portfólio — lemos cada nota pessoalmente.",
     "sig.success.waitlist.kicker": "✓ Está na waitlist do tier público",
-    "sig.success.waitlist.body": "Enviaremos um email para <b>{email}</b> quando o tier público abrir, em Set/Out 2026. Entretanto, responda com qualquer coisa sobre o seu portfólio — lemos cada nota pessoalmente.",
+    "sig.success.waitlist.body": "Enviaremos um email para <b>{email}</b> quando o tier público abrir — data a anunciar. Entretanto, responda com qualquer coisa sobre o seu portfólio — lemos cada nota pessoalmente.",
 
     // ----- FAQ -----
     "faq.eyebrow": "Perguntas frequentes",
@@ -202,9 +202,9 @@ const DICT = {
     "faq.q3": "Como é que a Portiqa ajuda na conformidade com RNAL, IVA e taxa turística?",
     "faq.a3": "A Portiqa gera faturação sequencial com IVA de acordo com as regras da Autoridade Tributária, calcula a taxa turística por hóspede em todos os municípios portugueses que a cobram (incluindo Lisboa, Porto, Algarve e Madeira com as suas regras específicas) e mantém o registo de licenças AL e alterações RNAL por propriedade. Sai um só relatório pronto para enviar ao contabilista.",
     "faq.q4": "Para quantas unidades é que a Portiqa é indicada?",
-    "faq.a4": "A Portiqa está pensada para gestores com 1 a 100 propriedades em Portugal — o perfil que ganha mais ao automatizar operações mas não tem dimensão para um PMS enterprise. Acima de 100 propriedades devemos falar sobre o escalão adequado. O programa Founding 20 é dedicado a gestores profissionais com 5+ propriedades. Anfitriões com 1–4 propriedades entram automaticamente na waitlist do tier público (lançamento Set/Out 2026).",
+    "faq.a4": "A Portiqa está pensada para gestores com 1 a 100 propriedades em Portugal — o perfil que ganha mais ao automatizar operações mas não tem dimensão para um PMS enterprise. Acima de 100 propriedades devemos falar sobre o escalão adequado. O programa Founding 20 é dedicado a gestores profissionais com 5+ propriedades. Anfitriões com 1–4 propriedades entram automaticamente na waitlist do tier público (data de lançamento a anunciar).",
     "faq.q5": "Quanto custa a Portiqa?",
-    "faq.a5": "O preço público ainda não foi anunciado. Os Founding 20 — os primeiros 20 gestores em beta privada — garantem uma vantagem vitalícia sobre o preço final, canal directo de Slack com a equipa fundadora e primeira palavra no roadmap. Reserve vaga para ser dos primeiros a saber.",
+    "faq.a5": "O preço público ainda não foi anunciado. Os Founding 20 — os primeiros 20 gestores em beta privada — garantem 30% de desconto com preço congelado durante 24 meses, nunca pagam mais de 80% do preço de tabela, e têm canal directo de Slack com a equipa fundadora e primeira palavra no roadmap. Reserve vaga para ser dos primeiros a saber.",
     "faq.q6": "Como é que a Portiqa calcula a taxa turística?",
     "faq.a6": "A Portiqa mantém uma tabela actualizada da taxa turística para todos os municípios portugueses que a cobram e aplica automaticamente a regra correcta por propriedade, por hóspede, por noite — incluindo limites por estadia, isenções por idade e variações sazonais. A taxa é cobrada separadamente do alojamento e sem IVA, porque já é uma taxa municipal — o relatório mensal por município sai pronto para a declaração à câmara.",
     "faq.q7": "Qual é a diferença entre a Portiqa e Hostaway, Guesty ou Lodgify?",
@@ -262,7 +262,7 @@ const DICT = {
 
   en: {
     // ----- Announcement bar -----
-    "announce.text": "Private beta — 20 spots · Public launch Sep/Oct 2026",
+    "announce.text": "Private beta — 20 spots · Launch date to be announced",
     // ----- Nav -----
     "nav.live": "See it working",
     "nav.problem": "The day",
@@ -420,7 +420,7 @@ const DICT = {
     "sig.badge": "Founding 20 · Limited spots",
     "sig.eyebrow": "Early access",
     "sig.h2": "Find your <em>port</em> in property management.",
-    "sig.lede": "Portiqa is in private beta with a handful of Portuguese managers. Founding 20 get lifetime 30% off, direct Slack to the team, and first influence on the roadmap.",
+    "sig.lede": "Portiqa is in private beta with a handful of Portuguese managers. Founding 20 get 30% off with pricing frozen for 24 months — and never pay more than 80% of list price — direct Slack to the team, and first influence on the roadmap.",
     "sig.name": "Full name",
     "sig.email": "Email",
     "sig.whatsapp": "WhatsApp (optional)",
@@ -432,13 +432,13 @@ const DICT = {
     "sig.meta.card": "● No card needed",
     "sig.meta.pilot": "● 14-day pilot",
     "sig.submit": "Reserve my spot →",
-    "sig.waitlist.note": "Glad to have you. Founding 20 is reserved for managers with 5+ properties — you're automatically on the public-tier waitlist, launching Sep/Oct 2026.",
+    "sig.waitlist.note": "Glad to have you. Founding 20 is reserved for managers with 5+ properties — you're automatically on the public-tier waitlist, launch date to be announced.",
     "sig.waitlist.submit": "Join the waitlist →",
     "sig.success.kicker": "✓ You're on the Founding 20 list",
     "sig.success.thanks": "Thank you, {name}.",
     "sig.success.body": "We'll email <b>{email}</b> when your spot opens. In the meantime, reply with anything about your portfolio — we read every note personally.",
     "sig.success.waitlist.kicker": "✓ You're on the public-tier waitlist",
-    "sig.success.waitlist.body": "We'll email <b>{email}</b> when the public tier opens, in Sep/Oct 2026. In the meantime, reply with anything about your portfolio — we read every note personally.",
+    "sig.success.waitlist.body": "We'll email <b>{email}</b> when the public tier opens — date to be announced. In the meantime, reply with anything about your portfolio — we read every note personally.",
 
     // ----- FAQ -----
     "faq.eyebrow": "Frequently asked questions",
@@ -451,9 +451,9 @@ const DICT = {
     "faq.q3": "How does Portiqa handle RNAL, IVA, and tourist-tax compliance?",
     "faq.a3": "Portiqa generates sequential IVA invoices to Portuguese Tax Authority rules, calculates per-guest tourist tax in every Portuguese municipality that charges it (Lisbon, Porto, Algarve, and Madeira with their specific rules), and tracks AL licenses and RNAL changes per property. One report, ready to hand to your accountant.",
     "faq.q4": "How many units is Portiqa built for?",
-    "faq.a4": "Portiqa targets managers with 1 to 100 properties in Portugal — the tier that gains the most from automation but isn't big enough for enterprise PMS. Above 100 properties, let's talk about the right pricing tier. The Founding 20 program is for professional managers with 5+ properties. Hosts with 1–4 properties are automatically added to the public-tier waitlist (launching Sep/Oct 2026).",
+    "faq.a4": "Portiqa targets managers with 1 to 100 properties in Portugal — the tier that gains the most from automation but isn't big enough for enterprise PMS. Above 100 properties, let's talk about the right pricing tier. The Founding 20 program is for professional managers with 5+ properties. Hosts with 1–4 properties are automatically added to the public-tier waitlist (launch date to be announced).",
     "faq.q5": "How much does Portiqa cost?",
-    "faq.a5": "Public pricing hasn't been announced yet. Founding 20 — the first 20 managers in private beta — lock in a lifetime advantage on the final price, a direct Slack channel with the founding team, and first say on the roadmap. Reserve a spot to be among the first to know.",
+    "faq.a5": "Public pricing hasn't been announced yet. Founding 20 — the first 20 managers in private beta — lock in 30% off with pricing frozen for 24 months, never pay more than 80% of list price, and get a direct Slack channel with the founding team plus first say on the roadmap. Reserve a spot to be among the first to know.",
     "faq.q6": "How does Portiqa calculate tourist tax?",
     "faq.a6": "Portiqa keeps an up-to-date tourist-tax table for every Portuguese municipality that charges it and applies the right rule per property, per guest, per night — including stay caps, age exemptions, and seasonal variations. The tax is charged separately from the accommodation and without VAT — because it's already a municipal levy — and the monthly per-municipality report is ready to file with the city.",
     "faq.q7": "How is Portiqa different from Hostaway, Guesty, or Lodgify?",

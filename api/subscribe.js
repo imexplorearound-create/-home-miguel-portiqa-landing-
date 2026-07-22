@@ -5,7 +5,7 @@
 //   3. Notify the founders inbox with the full submission data + tier
 //
 // Tiers (derived from `units`):
-//   waitlist_public  → 1–4 properties (public tier launching Sep/Oct 2026)
+//   waitlist_public  → 1–4 properties (public tier, launch date TBA)
 //   founding_20      → 5+ properties (Founding 20 program, default)
 //
 // Required env vars (set in Vercel → Project → Settings → Environment Variables):
@@ -267,10 +267,11 @@ function waitlistEmailText({ firstName }) {
     `Olá ${greet},`,
     "",
     "Obrigado pelo interesse na Portiqa. Apontámos o seu email à waitlist",
-    "do tier público — que abre em Setembro/Outubro de 2026.",
+    "do tier público — data de abertura a anunciar em breve.",
     "",
     "O programa Founding 20 (com canal directo de Slack aos fundadores e",
-    "30% vitalício) é exclusivo para gestores profissionais com 5 ou mais",
+    "30% de desconto com preço congelado durante 24 meses) é exclusivo",
+    "para gestores profissionais com 5 ou mais",
     "propriedades. Quando o seu portfólio chegar lá, avise-nos e podemos",
     "rever a vaga.",
     "",
@@ -321,8 +322,8 @@ function waitlistEmailHtml({ firstName }) {
           <tr>
             <td style="padding:8px 36px 32px 36px;color:#1a1a1a;font-size:15px;">
               <p style="margin:0 0 16px;">Olá ${greet},</p>
-              <p style="margin:0 0 16px;">Obrigado pelo interesse na Portiqa. Apontámos o seu email à <strong>waitlist do tier público</strong> — que abre em <strong>Setembro/Outubro de 2026</strong>.</p>
-              <p style="margin:0 0 16px;">O programa Founding 20 (com canal directo de Slack aos fundadores e 30% vitalício) é exclusivo para gestores profissionais com 5 ou mais propriedades. Quando o seu portfólio chegar lá, avise-nos e podemos rever a vaga.</p>
+              <p style="margin:0 0 16px;">Obrigado pelo interesse na Portiqa. Apontámos o seu email à <strong>waitlist do tier público</strong> — data de abertura <strong>a anunciar em breve</strong>.</p>
+              <p style="margin:0 0 16px;">O programa Founding 20 (com canal directo de Slack aos fundadores e 30% de desconto com preço congelado durante 24 meses) é exclusivo para gestores profissionais com 5 ou mais propriedades. Quando o seu portfólio chegar lá, avise-nos e podemos rever a vaga.</p>
               <p style="margin:0 0 16px;">Até ao lançamento público vamos enviar-lhe, ocasionalmente, uma nota curta — o que mudámos no produto, o que aprendemos a falar com gestores, e leitura útil sobre alojamento local em Portugal. Se for ruído, sai com um clique.</p>
               <p style="margin:0 0 12px;"><strong>Entretanto, se tiver 2 minutos, responda a este email com:</strong></p>
               <p style="margin:0 0 12px;padding-left:20px;border-left:3px solid #b08a2c;"><strong>1.</strong> Qual é a maior dor diária na gestão da(s) sua(s) propriedade(s)?</p>
