@@ -261,6 +261,12 @@ function notificationText({ name, email, phone, companyClean, unitsClean, tier }
   ].join("\n");
 }
 
+// Termos oficiais Founding 20 (decisão 2026-07-22). Uma frase canónica,
+// partilhada pelo email de texto e HTML — manter em sincronia com
+// `sig.lede`/`faq.a5` em src/i18n.jsx.
+const FOUNDING_PERKS_PT =
+  "canal directo de Slack aos fundadores, 30% de desconto com preço congelado durante 24 meses e a garantia de nunca pagar mais de 80% do preço de tabela";
+
 function waitlistEmailText({ firstName }) {
   const greet = firstName || "amigo";
   return [
@@ -269,11 +275,9 @@ function waitlistEmailText({ firstName }) {
     "Obrigado pelo interesse na Portiqa. Apontámos o seu email à waitlist",
     "do tier público — data de abertura a anunciar em breve.",
     "",
-    "O programa Founding 20 (com canal directo de Slack aos fundadores e",
-    "30% de desconto com preço congelado durante 24 meses) é exclusivo",
-    "para gestores profissionais com 5 ou mais",
-    "propriedades. Quando o seu portfólio chegar lá, avise-nos e podemos",
-    "rever a vaga.",
+    `O programa Founding 20 (com ${FOUNDING_PERKS_PT}) é exclusivo para`,
+    "gestores profissionais com 5 ou mais propriedades. Quando o seu",
+    "portfólio chegar lá, avise-nos e podemos rever a vaga.",
     "",
     "Até ao lançamento público vamos enviar-lhe, ocasionalmente, uma nota",
     "curta — o que mudámos no produto, o que aprendemos a falar com",
@@ -323,7 +327,7 @@ function waitlistEmailHtml({ firstName }) {
             <td style="padding:8px 36px 32px 36px;color:#1a1a1a;font-size:15px;">
               <p style="margin:0 0 16px;">Olá ${greet},</p>
               <p style="margin:0 0 16px;">Obrigado pelo interesse na Portiqa. Apontámos o seu email à <strong>waitlist do tier público</strong> — data de abertura <strong>a anunciar em breve</strong>.</p>
-              <p style="margin:0 0 16px;">O programa Founding 20 (com canal directo de Slack aos fundadores e 30% de desconto com preço congelado durante 24 meses) é exclusivo para gestores profissionais com 5 ou mais propriedades. Quando o seu portfólio chegar lá, avise-nos e podemos rever a vaga.</p>
+              <p style="margin:0 0 16px;">O programa Founding 20 (com ${FOUNDING_PERKS_PT}) é exclusivo para gestores profissionais com 5 ou mais propriedades. Quando o seu portfólio chegar lá, avise-nos e podemos rever a vaga.</p>
               <p style="margin:0 0 16px;">Até ao lançamento público vamos enviar-lhe, ocasionalmente, uma nota curta — o que mudámos no produto, o que aprendemos a falar com gestores, e leitura útil sobre alojamento local em Portugal. Se for ruído, sai com um clique.</p>
               <p style="margin:0 0 12px;"><strong>Entretanto, se tiver 2 minutos, responda a este email com:</strong></p>
               <p style="margin:0 0 12px;padding-left:20px;border-left:3px solid #b08a2c;"><strong>1.</strong> Qual é a maior dor diária na gestão da(s) sua(s) propriedade(s)?</p>

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { CONSENT_EVENT, readConsent } from "./consent.js";
 
 /* ---------- Meta Pixel — consent-gated (Consent Mode v2) ----------
  *
@@ -14,30 +15,13 @@ import { useEffect } from "react";
  */
 
 const PIXEL_ID = "1800304264271258";
-const CONSENT_KEY = "portiqa_consent_v1";
-
-// Module-scoped flag — the primary double-init guard. Survives re-renders and
-// re-mounts within the same page load.
-let initialized = false;
-
-function marketingGranted() {
-  if (typeof window === "undefined") return false;
-  try {
-    const stored = JSON.parse(localStorage.getItem(CONSENT_KEY) || "null");
-    return !!(stored && stored.marketing);
-  } catch (e) {
-    return false;
-  }
-}
 
 // Idempotent: safe to call on load and again on every consent change.
+// `window.fbq` only exists once this loader has run, so its presence is the
+// double-init guard.
 function initMetaPixel() {
   if (typeof window === "undefined" || typeof document === "undefined") return;
-  // Double-init guard: our flag + Facebook's own `if (f.fbq) return` below.
-  if (initialized || window.fbq) {
-    initialized = true;
-    return;
-  }
+  if (window.fbq) return;
 
   // Standard Meta Pixel loader. This is the line that first hits
   // connect.facebook.net, so it must never run before consent is granted.
@@ -62,14 +46,12 @@ function initMetaPixel() {
 
   window.fbq("init", PIXEL_ID);
   window.fbq("track", "PageView");
-  initialized = true;
 }
 
 // Fire a Lead event — ONLY when the pixel is initialized (consent given).
 // No-ops silently otherwise; never throws.
 export function trackMetaLead() {
-  if (typeof window === "undefined") return;
-  if (!initialized || typeof window.fbq !== "function") return;
+  if (typeof window === "undefined" || typeof window.fbq !== "function") return;
   window.fbq("track", "Lead");
 }
 
@@ -77,14 +59,14 @@ export function trackMetaLead() {
 export function MetaPixel() {
   useEffect(() => {
     // Already consented from a previous visit → init immediately on load.
-    if (marketingGranted()) initMetaPixel();
+    if (readConsent()?.marketing) initMetaPixel();
 
     // React the moment the user accepts marketing in the banner.
     const onConsent = (e) => {
-      if (e && e.detail && e.detail.marketing) initMetaPixel();
+      if (e.detail?.marketing) initMetaPixel();
     };
-    window.addEventListener("portiqa:consent", onConsent);
-    return () => window.removeEventListener("portiqa:consent", onConsent);
+    window.addEventListener(CONSENT_EVENT, onConsent);
+    return () => window.removeEventListener(CONSENT_EVENT, onConsent);
   }, []);
 
   return null;

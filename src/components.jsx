@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useT, LangToggle } from "./i18n.jsx";
 import { ThemeToggle } from "./theme.jsx";
 import { trackMetaLead } from "./MetaPixel.jsx";
+import { CONSENT_EVENT, readConsent, writeConsent } from "./consent.js";
 
 /* ---------- Logo: "Golden Threshold" minimal arch ---------- */
 export function LogoMark({ size = 22 }) {
@@ -694,7 +695,6 @@ export function Footer() {
 }
 
 /* ---------- Cookie Banner (Consent Mode v2) ---------- */
-const CONSENT_KEY = "portiqa_consent_v1";
 
 function applyConsent({ analytics, marketing }) {
   if (typeof window === "undefined") return;
@@ -716,9 +716,7 @@ function applyConsent({ analytics, marketing }) {
   // Notify consent-gated integrations (e.g. Meta Pixel) so they can init the
   // moment marketing consent flips to granted. Denied → listeners no-op.
   window.dispatchEvent(
-    new CustomEvent("portiqa:consent", {
-      detail: { analytics: !!analytics, marketing: !!marketing },
-    })
+    new CustomEvent(CONSENT_EVENT, { detail: { analytics, marketing } })
   );
 }
 
@@ -730,8 +728,7 @@ export function CookieBanner() {
   const [marketing, setMarketing] = useState(false);
 
   useEffect(() => {
-    let stored = null;
-    try { stored = JSON.parse(localStorage.getItem(CONSENT_KEY) || "null"); } catch (e) {}
+    const stored = readConsent();
     if (!stored) {
       setVisible(true);
     } else {
@@ -745,7 +742,7 @@ export function CookieBanner() {
 
   const save = (a, m) => {
     const payload = { analytics: !!a, marketing: !!m, ts: new Date().toISOString() };
-    try { localStorage.setItem(CONSENT_KEY, JSON.stringify(payload)); } catch (e) {}
+    writeConsent(payload);
     applyConsent(payload);
     setVisible(false);
     setExpanded(false);
