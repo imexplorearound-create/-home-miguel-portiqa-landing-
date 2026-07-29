@@ -7,6 +7,7 @@ import { marked } from "marked";
 import descobertaMd from "./descoberta.md?raw";
 import pricingMd from "./pricing.md?raw";
 import comunicacaoMd from "./comunicacao.md?raw";
+import gestaoMd from "./gestao-operacional.md?raw";
 
 export const SITE = "https://portiqa.pt";
 export const MANUAL_BASE = "/al-com-ai";
@@ -228,6 +229,56 @@ const RAW = {
       {
         q: "Como evito que a IA dê informação errada?",
         a: "Garantindo que responde a partir da informação aprovada e atualizada de cada propriedade (não da memória geral do modelo), corrigindo a fonte central e não apenas a mensagem, e reduzindo a autonomia sempre que o custo de um erro é alto.",
+      },
+    ],
+  },
+
+  "gestao-operacional-alojamento-local": {
+    spoke: 4,
+    md: gestaoMd,
+    title: "Gestão operacional no alojamento local: das tarefas aos imprevistos",
+    seoTitle: "Automatizar a gestão operacional no alojamento local com AI",
+    description:
+      "Como automatizar limpezas, tarefas e coordenação no alojamento local, onde as regras chegam e onde a AI ajuda a lidar com imprevistos.",
+    published: "2026-07-29",
+    updated: "2026-07-29",
+    keywords: [
+      "gestão operacional no alojamento local",
+      "automatizar limpezas no alojamento local",
+      "AI na gestão operacional",
+      "coordenação de equipas de alojamento local",
+      "tarefas operacionais no alojamento local",
+    ],
+    tldr:
+      "A gestão operacional no alojamento local não falha por falta de calendários, tarefas ou checklists — falha no espaço entre o que estava planeado e o que realmente aconteceu. As regras automáticas resolvem o percurso previsível (que tarefas existem entre uma saída e uma entrada, a janela disponível, quem está de serviço); o valor da AI está em ler o que saiu do plano — interpretar mensagens da equipa e fotografias, perceber o impacto e preparar uma proposta — deixando a decisão a uma pessoa. E mede-se coordenação real (tempo até alguém assumir o problema, tarefas reabertas, propriedades 'prontas' com pendências), não menos mensagens.",
+    takeaways: [
+      "O plano é a parte fácil: o que consome a coordenação são as exceções (uma tarefa que atrasa, uma falta, uma avaria). As regras automáticas cobrem o percurso normal; um calendário automático não conhece a capacidade real da equipa.",
+      "O WhatsApp continua a ganhar porque remove fricção — mas cria um problema de memória: a operação fica presa dentro de conversas e o gestor torna-se a integração manual entre pessoas e ferramentas.",
+      "Onde a AI acrescenta valor não é executar tarefas, é ler o que saiu do plano: interpretar mensagens e fotografias, separar vários acontecimentos, perceber o impacto e preparar uma proposta de reajuste.",
+      "Quatro níveis de autonomia (registo · atualização factual · proposta · execução aprovada): a AI começa em modo de proposta e a autonomia cresce por confiança, nunca para lá da autoridade que a empresa delegou.",
+      "A AI não deve decidir sozinha em decisões laborais, bloqueios de propriedades, compensações ou compromissos financeiros — pode identificar o problema, explicar o impacto e preparar alternativas.",
+      "Mede coordenação, não silêncio: tempo até alguém assumir o problema, tarefas reabertas, propriedades marcadas prontas com pendências e alterações manuais ao plano. Menos mensagens não significa melhor operação.",
+    ],
+    faq: [
+      {
+        q: "Automatizar tarefas resolve a gestão operacional no alojamento local?",
+        a: "Só em parte. As regras automáticas resolvem o percurso previsível — que tarefas existem entre uma saída e uma entrada, a janela disponível, quem está de serviço. O que consome a coordenação são as exceções (uma tarefa que atrasa, uma falta, uma avaria), e é aí que um calendário automático deixa de chegar.",
+      },
+      {
+        q: "Porque é que as equipas continuam a usar o WhatsApp em vez de uma app de tarefas?",
+        a: "Porque remove fricção — toda a gente já o sabe usar e escreve naturalmente. O problema não é a app; é que a informação fica presa na conversa, sem registo estruturado, e o gestor passa a ser a memória e a integração entre pessoas e sistemas.",
+      },
+      {
+        q: "Onde é que a AI acrescenta valor real na operação?",
+        a: "Menos em executar e mais em ler o que saiu do plano: interpretar uma mensagem ('limpeza concluída, falta uma toalha, a luz não acende'), separar os vários acontecimentos, perceber o impacto (há check-in às 15h?) e preparar uma proposta organizada para a coordenação decidir.",
+      },
+      {
+        q: "A AI pode reatribuir tarefas ou decidir sozinha?",
+        a: "Não deve. O modelo recomendado são quatro níveis de autonomia — registar, atualizar factos, propor e executar decisões já aprovadas — começando em modo de proposta. Decisões laborais, bloqueios, compensações e compromissos financeiros ficam sempre com quem tem autoridade.",
+      },
+      {
+        q: "Como sei se a minha operação está realmente coordenada?",
+        a: "Não é por haver menos mensagens. Mede o tempo até alguém assumir um problema, as tarefas reabertas, as propriedades marcadas como prontas mas com pendências e as alterações manuais ao plano — sinais de coordenação real, não de silêncio.",
       },
     ],
   },
