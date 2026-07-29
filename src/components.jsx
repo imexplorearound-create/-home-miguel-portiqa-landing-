@@ -27,7 +27,7 @@ export function Logo() {
 export function AnnouncementBar() {
   const { t } = useT();
   return (
-    <a className="announce-bar" href="#signup">
+    <a className="announce-bar" href="/#signup">
       <span className="announce-dot" aria-hidden="true" />
       <span className="announce-text">{t("announce.text")}</span>
       <span className="announce-arrow" aria-hidden="true">→</span>
@@ -42,17 +42,18 @@ export function Nav() {
       <div className="container nav-inner">
         <Logo />
         <div className="nav-links">
-          <a href="#live">{t("nav.live")}</a>
-          <a href="#problem">{t("nav.problem")}</a>
-          <a href="#constellation">{t("nav.constellation")}</a>
-          <a href="#pillars">{t("nav.pillars")}</a>
-          <a href="#compare">{t("nav.compare")}</a>
-          <a href="#founder">{t("nav.about")}</a>
+          <a href="/#live">{t("nav.live")}</a>
+          <a href="/#problem">{t("nav.problem")}</a>
+          <a href="/#constellation">{t("nav.constellation")}</a>
+          <a href="/#pillars">{t("nav.pillars")}</a>
+          <a href="/#compare">{t("nav.compare")}</a>
+          <a href="/#founder">{t("nav.about")}</a>
+          <a href="/al-com-ai">{t("nav.blog")}</a>
         </div>
         <div className="nav-right">
           <ThemeToggle />
           <LangToggle />
-          <a className="nav-cta" href="#signup">{t("nav.cta")}</a>
+          <a className="nav-cta" href="/#signup">{t("nav.cta")}</a>
         </div>
       </div>
     </nav>
@@ -668,14 +669,15 @@ export function Footer() {
         </div>
         <div className="footer-col">
           <h4>{t("ft.product")}</h4>
-          <a href="#constellation">{t("ft.product.constellation")}</a>
-          <a href="#pillars">{t("ft.product.why")}</a>
-          <a href="#compare">{t("ft.product.compare")}</a>
-          <a href="#integrations">{t("ft.product.integrations")}</a>
+          <a href="/#constellation">{t("ft.product.constellation")}</a>
+          <a href="/#pillars">{t("ft.product.why")}</a>
+          <a href="/#compare">{t("ft.product.compare")}</a>
+          <a href="/#integrations">{t("ft.product.integrations")}</a>
+          <a href="/al-com-ai">{t("ft.product.blog")}</a>
         </div>
         <div className="footer-col">
           <h4>{t("ft.company")}</h4>
-          <a href="#founder">{t("ft.company.team")}</a>
+          <a href="/#founder">{t("ft.company.team")}</a>
           <a href="#">{t("ft.company.careers")}</a>
           <a href="#">{t("ft.company.press")}</a>
           <a href="#">{t("ft.company.contact")}</a>

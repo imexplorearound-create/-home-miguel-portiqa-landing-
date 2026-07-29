@@ -1,0 +1,16 @@
+# Portiqa
+
+> Portiqa é um PMS (sistema de gestão de propriedades) português com IA nativa para operadores de alojamento local (short-term rental) em Portugal, com 1 a 100 propriedades. Seis agentes de IA tratam de comunicação com hóspedes, preços, limpezas, reviews e conformidade (RNAL, taxa turística). Construído por um founder-operador (Vibrant Host, ~20 apartamentos no Porto).
+
+## AL com AI
+
+Artigos práticos, sem hype, sobre inteligência artificial na gestão de alojamento local em Portugal. Escritos por Miguel Martins, operador real e fundador da Portiqa.
+
+- [Descoberta de propriedades com IA](https://portiqa.pt/al-com-ai/descoberta-de-propriedades): como os assistentes de IA (ChatGPT, Gemini, Perplexity) mudam a descoberta de alojamento e o que é GEO (Generative Engine Optimization) para AL. Inclui dados reais de tráfego da Vibrant Host.
+- [Pricing dinâmico no alojamento local](https://portiqa.pt/al-com-ai/pricing-dinamico): a diferença entre pricing dinâmico (software) e revenue management (estratégia); os quatro erros que mais custam dinheiro; onde a IA acrescenta valor.
+- [Automatizar a comunicação com hóspedes](https://portiqa.pt/al-com-ai/comunicacao-com-hospedes): o que automatizar e o que manter sob supervisão humana; a regra dinheiro/conflito/emergência/reputação; human-in-the-loop; como medir.
+
+## Sobre
+
+- [Portiqa — página principal](https://portiqa.pt/): visão geral do produto, os seis agentes de IA e o programa Founding 20.
+- [AL com AI — índice](https://portiqa.pt/al-com-ai): todos os artigos publicados.
