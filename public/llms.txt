@@ -6,12 +6,12 @@
 
 Artigos práticos, sem hype, sobre inteligência artificial na gestão de alojamento local em Portugal. Escritos por Miguel Martins, operador real e fundador da Portiqa.
 
-- [Descoberta de propriedades com IA](https://portiqa.pt/al-com-ai/descoberta-de-propriedades): como os assistentes de IA (ChatGPT, Gemini, Perplexity) mudam a descoberta de alojamento e o que é GEO (Generative Engine Optimization) para AL. Inclui dados reais de tráfego da Vibrant Host.
-- [Pricing dinâmico no alojamento local](https://portiqa.pt/al-com-ai/pricing-dinamico): a diferença entre pricing dinâmico (software) e revenue management (estratégia); os quatro erros que mais custam dinheiro; onde a IA acrescenta valor.
-- [Automatizar a comunicação com hóspedes](https://portiqa.pt/al-com-ai/comunicacao-com-hospedes): o que automatizar e o que manter sob supervisão humana; a regra dinheiro/conflito/emergência/reputação; human-in-the-loop; como medir.
-- [Gestão operacional no alojamento local](https://portiqa.pt/al-com-ai/gestao-operacional-alojamento-local): porque a operação falha nas exceções e não no plano; porque o WhatsApp continua a ganhar e o problema de memória que cria; onde a AI acrescenta valor (ler o que saiu do plano) e os quatro níveis de autonomia; como medir coordenação real.
+- [Descoberta de propriedades com IA](https://portiqa.io/al-com-ai/descoberta-de-propriedades): como os assistentes de IA (ChatGPT, Gemini, Perplexity) mudam a descoberta de alojamento e o que é GEO (Generative Engine Optimization) para AL. Inclui dados reais de tráfego da Vibrant Host.
+- [Pricing dinâmico no alojamento local](https://portiqa.io/al-com-ai/pricing-dinamico): a diferença entre pricing dinâmico (software) e revenue management (estratégia); os quatro erros que mais custam dinheiro; onde a IA acrescenta valor.
+- [Automatizar a comunicação com hóspedes](https://portiqa.io/al-com-ai/comunicacao-com-hospedes): o que automatizar e o que manter sob supervisão humana; a regra dinheiro/conflito/emergência/reputação; human-in-the-loop; como medir.
+- [Gestão operacional no alojamento local](https://portiqa.io/al-com-ai/gestao-operacional-alojamento-local): porque a operação falha nas exceções e não no plano; porque o WhatsApp continua a ganhar e o problema de memória que cria; onde a AI acrescenta valor (ler o que saiu do plano) e os quatro níveis de autonomia; como medir coordenação real.
 
 ## Sobre
 
-- [Portiqa — página principal](https://portiqa.pt/): visão geral do produto, os seis agentes de IA e o programa Founding 20.
-- [AL com AI — índice](https://portiqa.pt/al-com-ai): todos os artigos publicados.
+- [Portiqa — página principal](https://portiqa.io/): visão geral do produto, os seis agentes de IA e o programa Founding 20.
+- [AL com AI — índice](https://portiqa.io/al-com-ai): todos os artigos publicados.

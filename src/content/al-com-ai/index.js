@@ -9,7 +9,7 @@ import pricingMd from "./pricing.md?raw";
 import comunicacaoMd from "./comunicacao.md?raw";
 import gestaoMd from "./gestao-operacional.md?raw";
 
-export const SITE = "https://portiqa.pt";
+export const SITE = "https://portiqa.io";
 export const MANUAL_BASE = "/al-com-ai";
 
 export const MANUAL = {

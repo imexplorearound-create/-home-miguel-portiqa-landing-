@@ -1,4 +1,4 @@
-# portiqa-landing — site portiqa.pt
+# portiqa-landing — site portiqa.io (ex-portiqa.pt, migrado 2026-08-11)
 
 Landing single-page + blog "AL com AI". **Vite + React 18** (sem framework, sem router).
 Deps: `react`, `react-dom`, `marked`. Dev: `vite`, `@vitejs/plugin-react`.
@@ -7,7 +7,7 @@ Deps: `react`, `react-dom`, `marked`. Dev: `vite`, `@vitejs/plugin-react`.
 - `npm run dev` — dev server (host 127.0.0.1:5173). Para expor: `npx vite --host 0.0.0.0`.
 - `npm run build` — **`vite build` + `node scripts/prerender.mjs`** (prerender por rota → HTML estático).
 - `npm run preview` — servir o `dist/`.
-- **Deploy:** `vercel --prod` (produção, alias `portiqa.pt`) · `vercel deploy` (preview). Projeto Vercel `vibranthost-vwfe`. Git: GitHub `imexplorearound-create/-home-miguel-portiqa-landing-`.
+- **Deploy:** `vercel --prod` (produção, alias `portiqa.io`) · `vercel deploy` (preview). Projeto Vercel `vibranthost-vwfe`. Git: GitHub `imexplorearound-create/-home-miguel-portiqa-landing-`.
 
 ## Arquitetura (essencial)
 - **Sem router.** `src/main.jsx` → `Root({ path })` → `Page` faz switch no path:

@@ -3,11 +3,11 @@
 // Add new URLs to the URLS array as the site grows.
 
 const KEY = "097addb6563a158ffc0801287835a55198d48d6ed43f628ce15f7446672ee6b4";
-const HOST = "portiqa.pt";
+const HOST = "portiqa.io";
 
 const URLS = [
-  "https://portiqa.pt/",
-  "https://portiqa.pt/privacidade",
+  "https://portiqa.io/",
+  "https://portiqa.io/privacidade",
 ];
 
 const body = {

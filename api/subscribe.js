@@ -16,9 +16,9 @@
 // Optional env vars:
 //   RESEND_AUDIENCE_ID_WAITLIST audience UUID for the public-tier waitlist.
 //                               If unset, waitlist contacts go to RESEND_AUDIENCE_ID.
-//   FROM_EMAIL                  default: "Portiqa <hello@portiqa.pt>"
+//   FROM_EMAIL                  default: "Portiqa <hello@portiqa.io>"
 //                               Falls back to "onboarding@resend.dev" until the
-//                               portiqa.pt domain is verified in Resend.
+//                               portiqa.io domain is verified in Resend.
 //   FROM_EMAIL_FALLBACK         default: "onboarding@resend.dev"
 
 const RESEND_API = "https://api.resend.com";
@@ -43,7 +43,7 @@ export default async function handler(req, res) {
   const audienceId = process.env.RESEND_AUDIENCE_ID;
   const audienceIdWaitlist = process.env.RESEND_AUDIENCE_ID_WAITLIST;
   const notificationEmail = process.env.NOTIFICATION_EMAIL;
-  const fromEmail = process.env.FROM_EMAIL || "Portiqa <hello@portiqa.pt>";
+  const fromEmail = process.env.FROM_EMAIL || "Portiqa <hello@portiqa.io>";
 
   if (!apiKey || !audienceId) {
     console.error("Missing RESEND_API_KEY or RESEND_AUDIENCE_ID");
@@ -171,8 +171,8 @@ function welcomeEmailText({ firstName }) {
     "  2. Se a IA pudesse resolver UMA tarefa do seu dia, qual escolhia?",
     "     Conversas com hóspedes? Preços? Limpezas? Conformidade?",
     "",
-    "Cada resposta é lida pelos dois fundadores — Miguel e Bruno —",
-    "pessoalmente. Não há funil, não há SDR, não há automação a ler",
+    "Cada resposta é lida pelo fundador — Miguel — pessoalmente.",
+    "Não há funil, não há SDR, não há automação a ler",
     "o que escreve. Promessa.",
     "",
     "De vez em quando vamos enviar uma nota curta — o que mudámos no",
@@ -181,17 +181,17 @@ function welcomeEmailText({ firstName }) {
     "no fim de cada email.",
     "",
     "Até breve,",
-    "Miguel & Bruno",
-    "Fundadores · Portiqa",
-    "Lisboa & Porto",
+    "Miguel",
+    "Fundador · Portiqa",
+    "Portugal",
     "",
     "---",
     "Portiqa",
     "Pombal Martins & Tadeu Fontes, Lda · NIPC 519 380 347",
     "Rua do Duque de Saldanha 651, 4300-466 Porto",
-    "https://portiqa.pt · privacidade@portiqa.pt",
+    "https://portiqa.io · privacidade@portiqa.io",
     "",
-    "Recebeu este email porque se inscreveu em portiqa.pt.",
+    "Recebeu este email porque se inscreveu em portiqa.io.",
     "Para sair: {{{RESEND_UNSUBSCRIBE_URL}}}",
   ].join("\n");
 }
@@ -218,19 +218,19 @@ function welcomeEmailHtml({ firstName }) {
               <p style="margin:0 0 12px;"><strong>Se tiver 2 minutos, responda a este email com:</strong></p>
               <p style="margin:0 0 12px;padding-left:20px;border-left:3px solid #b08a2c;"><strong>1.</strong> Qual é a maior dor diária com o seu PMS actual (ou com Excel, se for o caso)? A coisa que o tira do sério todas as semanas.</p>
               <p style="margin:0 0 16px;padding-left:20px;border-left:3px solid #b08a2c;"><strong>2.</strong> Se a IA pudesse resolver UMA tarefa do seu dia, qual escolhia? Conversas com hóspedes? Preços? Limpezas? Conformidade?</p>
-              <p style="margin:0 0 16px;">Cada resposta é lida pelos dois fundadores — Miguel e Bruno — pessoalmente. Não há funil, não há SDR, não há automação a ler o que escreve. Promessa.</p>
+              <p style="margin:0 0 16px;">Cada resposta é lida pelo fundador — Miguel — pessoalmente. Não há funil, não há SDR, não há automação a ler o que escreve. Promessa.</p>
               <p style="margin:0 0 24px;">De vez em quando vamos enviar uma nota curta — o que mudámos no produto, o que aprendemos a falar com gestores, e uma leitura útil sobre alojamento local em Portugal. Se for ruído, sai com um clique no fim de cada email.</p>
               <p style="margin:0 0 4px;">Até breve,</p>
-              <p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-style:italic;color:#1a1a1a;">Miguel &amp; Bruno</p>
-              <p style="margin:0;color:#666;font-size:13px;">Fundadores · Portiqa · Lisboa &amp; Porto</p>
+              <p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-style:italic;color:#1a1a1a;">Miguel</p>
+              <p style="margin:0;color:#666;font-size:13px;">Fundador · Portiqa · Portugal</p>
             </td>
           </tr>
           <tr>
             <td style="padding:20px 36px 32px 36px;border-top:1px solid rgba(0,0,0,0.08);color:#8a8a8a;font-size:12px;line-height:1.55;">
               <p style="margin:0 0 8px;"><strong style="color:#4a4a4a;">Portiqa</strong> — Pombal Martins &amp; Tadeu Fontes, Lda · NIPC 519 380 347</p>
               <p style="margin:0 0 8px;">Rua do Duque de Saldanha 651, 4300-466 Porto, Portugal</p>
-              <p style="margin:0 0 12px;"><a href="https://portiqa.pt" style="color:#b08a2c;text-decoration:none;">portiqa.pt</a> · <a href="mailto:privacidade@portiqa.pt" style="color:#b08a2c;text-decoration:none;">privacidade@portiqa.pt</a> · <a href="https://portiqa.pt/privacidade" style="color:#b08a2c;text-decoration:none;">Política de Privacidade</a></p>
-              <p style="margin:0;">Recebeu este email porque se inscreveu em portiqa.pt. <a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#8a8a8a;text-decoration:underline;">Sair da lista</a>.</p>
+              <p style="margin:0 0 12px;"><a href="https://portiqa.io" style="color:#b08a2c;text-decoration:none;">portiqa.io</a> · <a href="mailto:privacidade@portiqa.io" style="color:#b08a2c;text-decoration:none;">privacidade@portiqa.io</a> · <a href="https://portiqa.io/privacidade" style="color:#b08a2c;text-decoration:none;">Política de Privacidade</a></p>
+              <p style="margin:0;">Recebeu este email porque se inscreveu em portiqa.io. <a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#8a8a8a;text-decoration:underline;">Sair da lista</a>.</p>
             </td>
           </tr>
         </table>
@@ -290,21 +290,21 @@ function waitlistEmailText({ firstName }) {
     "",
     "  2. Se a IA pudesse resolver UMA tarefa do seu dia, qual escolhia?",
     "",
-    "Cada resposta é lida pelos dois fundadores — Miguel e Bruno —",
-    "pessoalmente. Mesmo durante o período de waitlist.",
+    "Cada resposta é lida pelo fundador — Miguel — pessoalmente.",
+    "Mesmo durante o período de waitlist.",
     "",
     "Até breve,",
-    "Miguel & Bruno",
-    "Fundadores · Portiqa",
-    "Lisboa & Porto",
+    "Miguel",
+    "Fundador · Portiqa",
+    "Portugal",
     "",
     "---",
     "Portiqa",
     "Pombal Martins & Tadeu Fontes, Lda · NIPC 519 380 347",
     "Rua do Duque de Saldanha 651, 4300-466 Porto",
-    "https://portiqa.pt · privacidade@portiqa.pt",
+    "https://portiqa.io · privacidade@portiqa.io",
     "",
-    "Recebeu este email porque se inscreveu em portiqa.pt.",
+    "Recebeu este email porque se inscreveu em portiqa.io.",
     "Para sair: {{{RESEND_UNSUBSCRIBE_URL}}}",
   ].join("\n");
 }
@@ -332,18 +332,18 @@ function waitlistEmailHtml({ firstName }) {
               <p style="margin:0 0 12px;"><strong>Entretanto, se tiver 2 minutos, responda a este email com:</strong></p>
               <p style="margin:0 0 12px;padding-left:20px;border-left:3px solid #b08a2c;"><strong>1.</strong> Qual é a maior dor diária na gestão da(s) sua(s) propriedade(s)?</p>
               <p style="margin:0 0 16px;padding-left:20px;border-left:3px solid #b08a2c;"><strong>2.</strong> Se a IA pudesse resolver UMA tarefa do seu dia, qual escolhia?</p>
-              <p style="margin:0 0 24px;">Cada resposta é lida pelos dois fundadores — Miguel e Bruno — pessoalmente. Mesmo durante o período de waitlist.</p>
+              <p style="margin:0 0 24px;">Cada resposta é lida pelo fundador — Miguel — pessoalmente. Mesmo durante o período de waitlist.</p>
               <p style="margin:0 0 4px;">Até breve,</p>
-              <p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-style:italic;color:#1a1a1a;">Miguel &amp; Bruno</p>
-              <p style="margin:0;color:#666;font-size:13px;">Fundadores · Portiqa · Lisboa &amp; Porto</p>
+              <p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-style:italic;color:#1a1a1a;">Miguel</p>
+              <p style="margin:0;color:#666;font-size:13px;">Fundador · Portiqa · Portugal</p>
             </td>
           </tr>
           <tr>
             <td style="padding:20px 36px 32px 36px;border-top:1px solid rgba(0,0,0,0.08);color:#8a8a8a;font-size:12px;line-height:1.55;">
               <p style="margin:0 0 8px;"><strong style="color:#4a4a4a;">Portiqa</strong> — Pombal Martins &amp; Tadeu Fontes, Lda · NIPC 519 380 347</p>
               <p style="margin:0 0 8px;">Rua do Duque de Saldanha 651, 4300-466 Porto, Portugal</p>
-              <p style="margin:0 0 12px;"><a href="https://portiqa.pt" style="color:#b08a2c;text-decoration:none;">portiqa.pt</a> · <a href="mailto:privacidade@portiqa.pt" style="color:#b08a2c;text-decoration:none;">privacidade@portiqa.pt</a> · <a href="https://portiqa.pt/privacidade" style="color:#b08a2c;text-decoration:none;">Política de Privacidade</a></p>
-              <p style="margin:0;">Recebeu este email porque se inscreveu em portiqa.pt. <a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#8a8a8a;text-decoration:underline;">Sair da lista</a>.</p>
+              <p style="margin:0 0 12px;"><a href="https://portiqa.io" style="color:#b08a2c;text-decoration:none;">portiqa.io</a> · <a href="mailto:privacidade@portiqa.io" style="color:#b08a2c;text-decoration:none;">privacidade@portiqa.io</a> · <a href="https://portiqa.io/privacidade" style="color:#b08a2c;text-decoration:none;">Política de Privacidade</a></p>
+              <p style="margin:0;">Recebeu este email porque se inscreveu em portiqa.io. <a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#8a8a8a;text-decoration:underline;">Sair da lista</a>.</p>
             </td>
           </tr>
         </table>

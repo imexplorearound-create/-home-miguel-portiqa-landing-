@@ -30,7 +30,7 @@ const DICT = {
     // ----- Hero -----
     "hero.eyebrow.a": "Portiqa · Founding 20 · Beta Privada",
     "hero.eyebrow.b": "Founding 20 · Beta Privada",
-    "hero.eyebrow.c": "Portiqa · est. 2026 · Lisboa & Porto",
+    "hero.eyebrow.c": "Portiqa · est. 2026 · Portugal",
     "hero.headline.a": "As suas propriedades não dormem. <em>A Portiqa também não.</em>",
     "hero.headline.a.alt": "Your properties never sleep. Neither does Portiqa.",
     "hero.headline.b": "O sistema de gestão que lhe devolve <em>horas ao dia</em>.",
@@ -42,7 +42,7 @@ const DICT = {
     "hero.cta.ghost.constellation": "Conhecer a Constelação",
     "hero.cta.ghost.agents": "Conhecer os 6 agentes",
     "hero.cta.ghost.c": "A Constelação",
-    "hero.microproof.a": "Construído por uma equipa portuguesa · Lisboa & Porto",
+    "hero.microproof.a": "Construído em Portugal",
     "hero.microproof.b": "Feito por quem conhece o mercado português de AL",
 
     // ----- Logos strip -----
@@ -149,12 +149,12 @@ const DICT = {
     "cmp.price.excel": "Barato em licença, caro em horas",
 
     // ----- Founder -----
-    "fnd.eyebrow": "Porque estamos a construir a Portiqa",
-    "fnd.quote": "Vivemos a mensagem das 6 da manhã, o caos do WhatsApp com a limpeza, o pesadelo em Excel da taxa turística. Cada PMS global fez-nos sentir estrangeiros na nossa própria conformidade. Por isso construímos aquele que precisávamos — calmo, português no seu núcleo, com uma equipa de IA a trabalhar enquanto dormimos.",
-    "fnd.sig": "— Miguel & Bruno",
-    "fnd.sig.sub": "Fundadores da Portiqa · Lisboa & Porto",
+    "fnd.eyebrow": "Porque estou a construir a Portiqa",
+    "fnd.quote": "Vivi a mensagem das 6 da manhã, o caos do WhatsApp com a limpeza, o pesadelo em Excel da taxa turística. Cada PMS global fez-me sentir estrangeiro na minha própria conformidade. Por isso construí aquele que precisava — calmo, português no seu núcleo, com uma equipa de IA a trabalhar enquanto durmo.",
+    "fnd.sig": "— Miguel",
+    "fnd.sig.sub": "Fundador da Portiqa · Portugal",
     "fnd.sig.linkedin": "LinkedIn em breve",
-    "fnd.photo": "[ MIGUEL & BRUNO · LISBOA & PORTO · 2026 ]",
+    "fnd.photo": "[ MIGUEL · PORTUGAL · 2026 ]",
 
     // ----- Integrations -----
     "int.eyebrow": "Integrações",
@@ -172,7 +172,7 @@ const DICT = {
     "sig.badge": "Founding 20 · Vagas limitadas",
     "sig.eyebrow": "Acesso antecipado",
     "sig.h2": "Encontre o seu <em>porto</em> na gestão de alojamento.",
-    "sig.lede": "A Portiqa está em beta privada com um punhado de gestores portugueses. Os Founding 20 ficam com 30% de desconto com preço congelado 24 meses — e nunca pagam mais de 80% do preço de tabela — canal direto no Slack com a equipa e primeira palavra no roadmap.",
+    "sig.lede": "A Portiqa está em beta privada com um punhado de gestores portugueses. Os Founding 20 ficam com 30% de desconto com preço congelado 24 meses — e nunca pagam mais de 80% do preço de tabela — canal direto no Slack com o fundador e primeira palavra no roadmap.",
     "sig.name": "Nome completo",
     "sig.email": "Email",
     "sig.whatsapp": "WhatsApp (opcional)",
@@ -205,17 +205,17 @@ const DICT = {
     "faq.q4": "Para quantas unidades é que a Portiqa é indicada?",
     "faq.a4": "A Portiqa está pensada para gestores com 1 a 100 propriedades em Portugal — o perfil que ganha mais ao automatizar operações mas não tem dimensão para um PMS enterprise. Acima de 100 propriedades devemos falar sobre o escalão adequado. O programa Founding 20 é dedicado a gestores profissionais com 5+ propriedades. Anfitriões com 1–4 propriedades entram automaticamente na waitlist do tier público (data de lançamento a anunciar).",
     "faq.q5": "Quanto custa a Portiqa?",
-    "faq.a5": "O preço público ainda não foi anunciado. Os Founding 20 — os primeiros 20 gestores em beta privada — garantem 30% de desconto com preço congelado durante 24 meses, nunca pagam mais de 80% do preço de tabela, e têm canal directo de Slack com a equipa fundadora e primeira palavra no roadmap. Reserve vaga para ser dos primeiros a saber.",
+    "faq.a5": "O preço público ainda não foi anunciado. Os Founding 20 — os primeiros 20 gestores em beta privada — garantem 30% de desconto com preço congelado durante 24 meses, nunca pagam mais de 80% do preço de tabela, e têm canal directo de Slack com o fundador e primeira palavra no roadmap. Reserve vaga para ser dos primeiros a saber.",
     "faq.q6": "Como é que a Portiqa calcula a taxa turística?",
     "faq.a6": "A Portiqa mantém uma tabela actualizada da taxa turística para todos os municípios portugueses que a cobram e aplica automaticamente a regra correcta por propriedade, por hóspede, por noite — incluindo limites por estadia, isenções por idade e variações sazonais. A taxa é cobrada separadamente do alojamento e sem IVA, porque já é uma taxa municipal — o relatório mensal por município sai pronto para a declaração à câmara.",
     "faq.q7": "Qual é a diferença entre a Portiqa e Hostaway, Guesty ou Lodgify?",
     "faq.a7": "Os PMS globais (Hostaway, Guesty, Lodgify) são capazes mas não foram construídos para Portugal. Não fazem conformidade RNAL nem faturação sequencial com IVA de forma nativa. A Portiqa trata da camada portuguesa de origem e corre agentes de IA autónomos em vez de apenas assistivos — trabalham enquanto o gestor dorme.",
     "faq.q8": "Quem está a construir a Portiqa?",
-    "faq.a8": "A Portiqa é fundada por Miguel e Bruno, dois portugueses entre Lisboa e Porto. Os Founding 20 têm canal directo de Slack com ambos os fundadores e influenciam directamente o roadmap do produto.",
+    "faq.a8": "A Portiqa é fundada por Miguel, operador português de alojamento local. Os Founding 20 têm canal directo de Slack com o fundador e influenciam directamente o roadmap do produto.",
 
     // ----- Footer -----
     "ft.tagline": "O PMS com IA nativa, feito para gestores portugueses de alojamento local. Encontre o seu porto.",
-    "ft.copyright": "© 2026 Portiqa · Lisboa & Porto",
+    "ft.copyright": "© 2026 Portiqa · Portugal",
     "ft.product": "Produto",
     "ft.company": "Empresa",
     "ft.legal": "Legal",
@@ -224,7 +224,7 @@ const DICT = {
     "ft.product.compare": "Comparar",
     "ft.product.integrations": "Integrações",
     "ft.product.blog": "Blog",
-    "ft.company.team": "Equipa fundadora",
+    "ft.company.team": "Fundador",
     "ft.company.careers": "Carreiras",
     "ft.company.press": "Imprensa",
     "ft.company.contact": "Contacto",
@@ -283,7 +283,7 @@ const DICT = {
     // ----- Hero -----
     "hero.eyebrow.a": "Portiqa · Founding 20 · Private Beta",
     "hero.eyebrow.b": "Founding 20 · Private Beta",
-    "hero.eyebrow.c": "Portiqa · est. 2026 · Lisbon & Porto",
+    "hero.eyebrow.c": "Portiqa · est. 2026 · Portugal",
     "hero.headline.a": "Your properties never sleep. <em>Neither does Portiqa.</em>",
     "hero.headline.a.alt": "As suas propriedades não dormem. A Portiqa também não.",
     "hero.headline.b": "The PMS that gives you back <em>hours of your day</em>.",
@@ -295,7 +295,7 @@ const DICT = {
     "hero.cta.ghost.constellation": "Meet the Constellation",
     "hero.cta.ghost.agents": "Meet the 6 agents",
     "hero.cta.ghost.c": "The Constellation",
-    "hero.microproof.a": "Built by a Portuguese team · Lisbon & Porto",
+    "hero.microproof.a": "Built in Portugal",
     "hero.microproof.b": "Made by people who know the Portuguese STR market",
 
     // Logos
@@ -400,12 +400,12 @@ const DICT = {
     "cmp.price.excel": "Cheap to license, expensive in hours",
 
     // Founder
-    "fnd.eyebrow": "Why we're building Portiqa",
-    "fnd.quote": "We've lived the 6am guest message, the WhatsApp cleaning chaos, the spreadsheet nightmare of tourist tax. Every global PMS made us feel like foreigners in our own compliance. So we built the one we needed — calm, Portuguese at its core, with an AI team that works while we sleep.",
-    "fnd.sig": "— Miguel & Bruno",
-    "fnd.sig.sub": "Portiqa founders · Lisbon & Porto",
+    "fnd.eyebrow": "Why I'm building Portiqa",
+    "fnd.quote": "I've lived the 6am guest message, the WhatsApp cleaning chaos, the spreadsheet nightmare of tourist tax. Every global PMS made me feel like a foreigner in my own compliance. So I built the one I needed — calm, Portuguese at its core, with an AI team that works while I sleep.",
+    "fnd.sig": "— Miguel",
+    "fnd.sig.sub": "Portiqa founder · Portugal",
     "fnd.sig.linkedin": "LinkedIn coming soon",
-    "fnd.photo": "[ MIGUEL & BRUNO · LISBON & PORTO · 2026 ]",
+    "fnd.photo": "[ MIGUEL · PORTUGAL · 2026 ]",
 
     // Integrations
     "int.eyebrow": "Integrations",
@@ -423,7 +423,7 @@ const DICT = {
     "sig.badge": "Founding 20 · Limited spots",
     "sig.eyebrow": "Early access",
     "sig.h2": "Find your <em>port</em> in property management.",
-    "sig.lede": "Portiqa is in private beta with a handful of Portuguese managers. Founding 20 get 30% off with pricing frozen for 24 months — and never pay more than 80% of list price — direct Slack to the team, and first influence on the roadmap.",
+    "sig.lede": "Portiqa is in private beta with a handful of Portuguese managers. Founding 20 get 30% off with pricing frozen for 24 months — and never pay more than 80% of list price — direct Slack to the founder, and first influence on the roadmap.",
     "sig.name": "Full name",
     "sig.email": "Email",
     "sig.whatsapp": "WhatsApp (optional)",
@@ -456,17 +456,17 @@ const DICT = {
     "faq.q4": "How many units is Portiqa built for?",
     "faq.a4": "Portiqa targets managers with 1 to 100 properties in Portugal — the tier that gains the most from automation but isn't big enough for enterprise PMS. Above 100 properties, let's talk about the right pricing tier. The Founding 20 program is for professional managers with 5+ properties. Hosts with 1–4 properties are automatically added to the public-tier waitlist (launch date to be announced).",
     "faq.q5": "How much does Portiqa cost?",
-    "faq.a5": "Public pricing hasn't been announced yet. Founding 20 — the first 20 managers in private beta — lock in 30% off with pricing frozen for 24 months, never pay more than 80% of list price, and get a direct Slack channel with the founding team plus first say on the roadmap. Reserve a spot to be among the first to know.",
+    "faq.a5": "Public pricing hasn't been announced yet. Founding 20 — the first 20 managers in private beta — lock in 30% off with pricing frozen for 24 months, never pay more than 80% of list price, and get a direct Slack channel with the founder plus first say on the roadmap. Reserve a spot to be among the first to know.",
     "faq.q6": "How does Portiqa calculate tourist tax?",
     "faq.a6": "Portiqa keeps an up-to-date tourist-tax table for every Portuguese municipality that charges it and applies the right rule per property, per guest, per night — including stay caps, age exemptions, and seasonal variations. The tax is charged separately from the accommodation and without VAT — because it's already a municipal levy — and the monthly per-municipality report is ready to file with the city.",
     "faq.q7": "How is Portiqa different from Hostaway, Guesty, or Lodgify?",
     "faq.a7": "Global PMS tools (Hostaway, Guesty, Lodgify) are capable but weren't built for Portugal. They don't natively handle RNAL or sequential IVA invoicing. Portiqa treats the Portuguese layer as first-class and runs autonomous AI agents — working while you sleep — rather than merely assistive ones.",
     "faq.q8": "Who is building Portiqa?",
-    "faq.a8": "Portiqa is founded by Miguel and Bruno, two Portuguese founders between Lisbon and Porto. Founding 20 members get a direct Slack channel with both founders and shape the product roadmap.",
+    "faq.a8": "Portiqa is founded by Miguel, a Portuguese short-term rental operator. Founding 20 members get a direct Slack channel with the founder and shape the product roadmap.",
 
     // Footer
     "ft.tagline": "The AI-native PMS for Portuguese short-term rental managers. Find your port.",
-    "ft.copyright": "© 2026 Portiqa · Lisbon & Porto",
+    "ft.copyright": "© 2026 Portiqa · Portugal",
     "ft.product": "Product",
     "ft.company": "Company",
     "ft.legal": "Legal",
@@ -475,7 +475,7 @@ const DICT = {
     "ft.product.compare": "Compare",
     "ft.product.integrations": "Integrations",
     "ft.product.blog": "Blog",
-    "ft.company.team": "Founding team",
+    "ft.company.team": "Founder",
     "ft.company.careers": "Careers",
     "ft.company.press": "Press",
     "ft.company.contact": "Contact",

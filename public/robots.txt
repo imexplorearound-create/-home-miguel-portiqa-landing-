@@ -50,4 +50,4 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-Sitemap: https://portiqa.pt/sitemap.xml
+Sitemap: https://portiqa.io/sitemap.xml

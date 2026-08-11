@@ -8,7 +8,7 @@ import { renderToString } from "react-dom/server";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const distDir = resolve(root, "dist");
 const indexPath = resolve(distDir, "index.html");
-const SITE = "https://portiqa.pt";
+const SITE = "https://portiqa.io";
 
 const esc = (s) =>
   String(s)

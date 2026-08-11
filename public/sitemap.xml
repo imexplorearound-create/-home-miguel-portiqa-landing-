@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://portiqa.pt/</loc>
+    <loc>https://portiqa.io/</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://portiqa.pt/al-com-ai</loc>
+    <loc>https://portiqa.io/al-com-ai</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://portiqa.pt/al-com-ai/descoberta-de-propriedades</loc>
+    <loc>https://portiqa.io/al-com-ai/descoberta-de-propriedades</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://portiqa.pt/al-com-ai/pricing-dinamico</loc>
+    <loc>https://portiqa.io/al-com-ai/pricing-dinamico</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://portiqa.pt/al-com-ai/comunicacao-com-hospedes</loc>
+    <loc>https://portiqa.io/al-com-ai/comunicacao-com-hospedes</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://portiqa.pt/al-com-ai/gestao-operacional-alojamento-local</loc>
+    <loc>https://portiqa.io/al-com-ai/gestao-operacional-alojamento-local</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://portiqa.pt/privacidade</loc>
+    <loc>https://portiqa.io/privacidade</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
