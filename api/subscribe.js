@@ -187,7 +187,7 @@ function welcomeEmailText({ firstName }) {
     "",
     "---",
     "Portiqa",
-    "Pombal Martins & Tadeu Fontes, Lda · NIPC 519 380 347",
+    "Existência Positiva, Unipessoal Lda · NIPC 515 390 470",
     "Rua do Duque de Saldanha 651, 4300-466 Porto",
     "https://portiqa.io · privacidade@portiqa.io",
     "",
@@ -227,7 +227,7 @@ function welcomeEmailHtml({ firstName }) {
           </tr>
           <tr>
             <td style="padding:20px 36px 32px 36px;border-top:1px solid rgba(0,0,0,0.08);color:#8a8a8a;font-size:12px;line-height:1.55;">
-              <p style="margin:0 0 8px;"><strong style="color:#4a4a4a;">Portiqa</strong> — Pombal Martins &amp; Tadeu Fontes, Lda · NIPC 519 380 347</p>
+              <p style="margin:0 0 8px;"><strong style="color:#4a4a4a;">Portiqa</strong> — Existência Positiva, Unipessoal Lda · NIPC 515 390 470</p>
               <p style="margin:0 0 8px;">Rua do Duque de Saldanha 651, 4300-466 Porto, Portugal</p>
               <p style="margin:0 0 12px;"><a href="https://portiqa.io" style="color:#b08a2c;text-decoration:none;">portiqa.io</a> · <a href="mailto:privacidade@portiqa.io" style="color:#b08a2c;text-decoration:none;">privacidade@portiqa.io</a> · <a href="https://portiqa.io/privacidade" style="color:#b08a2c;text-decoration:none;">Política de Privacidade</a></p>
               <p style="margin:0;">Recebeu este email porque se inscreveu em portiqa.io. <a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#8a8a8a;text-decoration:underline;">Sair da lista</a>.</p>
@@ -300,7 +300,7 @@ function waitlistEmailText({ firstName }) {
     "",
     "---",
     "Portiqa",
-    "Pombal Martins & Tadeu Fontes, Lda · NIPC 519 380 347",
+    "Existência Positiva, Unipessoal Lda · NIPC 515 390 470",
     "Rua do Duque de Saldanha 651, 4300-466 Porto",
     "https://portiqa.io · privacidade@portiqa.io",
     "",
@@ -340,7 +340,7 @@ function waitlistEmailHtml({ firstName }) {
           </tr>
           <tr>
             <td style="padding:20px 36px 32px 36px;border-top:1px solid rgba(0,0,0,0.08);color:#8a8a8a;font-size:12px;line-height:1.55;">
-              <p style="margin:0 0 8px;"><strong style="color:#4a4a4a;">Portiqa</strong> — Pombal Martins &amp; Tadeu Fontes, Lda · NIPC 519 380 347</p>
+              <p style="margin:0 0 8px;"><strong style="color:#4a4a4a;">Portiqa</strong> — Existência Positiva, Unipessoal Lda · NIPC 515 390 470</p>
               <p style="margin:0 0 8px;">Rua do Duque de Saldanha 651, 4300-466 Porto, Portugal</p>
               <p style="margin:0 0 12px;"><a href="https://portiqa.io" style="color:#b08a2c;text-decoration:none;">portiqa.io</a> · <a href="mailto:privacidade@portiqa.io" style="color:#b08a2c;text-decoration:none;">privacidade@portiqa.io</a> · <a href="https://portiqa.io/privacidade" style="color:#b08a2c;text-decoration:none;">Política de Privacidade</a></p>
               <p style="margin:0;">Recebeu este email porque se inscreveu em portiqa.io. <a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#8a8a8a;text-decoration:underline;">Sair da lista</a>.</p>
