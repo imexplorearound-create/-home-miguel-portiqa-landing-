@@ -14,7 +14,7 @@ import { CONSENT_EVENT, readConsent } from "./consent.js";
  * network — the component simply renders null.
  */
 
-const PIXEL_ID = "1800304264271258";
+const PIXEL_ID = "27580085711693038";
 
 // Idempotent: safe to call on load and again on every consent change.
 // `window.fbq` only exists once this loader has run, so its presence is the
