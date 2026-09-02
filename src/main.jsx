@@ -3,8 +3,9 @@ import ReactDOM from "react-dom/client";
 import { LangProvider } from "./i18n.jsx";
 import { ThemeProvider } from "./theme.jsx";
 import App from "./App.jsx";
-import { ManualHub, ArticlePage } from "./manual.jsx";
+import { ManualHub, GuiasHub, ArticlePage, GUIAS_COLLECTION } from "./manual.jsx";
 import { getArticle, MANUAL_BASE } from "./content/al-com-ai/index.js";
+import { getGuia, GUIAS_BASE } from "./content/guias/index.js";
 import "./styles/styles.css";
 import "./styles/see-working.css";
 
@@ -14,6 +15,11 @@ function Page({ path }) {
   if (p.startsWith(MANUAL_BASE + "/")) {
     const article = getArticle(p.slice(MANUAL_BASE.length + 1));
     if (article) return <ArticlePage article={article} />;
+  }
+  if (p === GUIAS_BASE) return <GuiasHub />;
+  if (p.startsWith(GUIAS_BASE + "/")) {
+    const guia = getGuia(p.slice(GUIAS_BASE.length + 1));
+    if (guia) return <ArticlePage article={guia} collection={GUIAS_COLLECTION} />;
   }
   return <App />;
 }

@@ -75,12 +75,12 @@ function authorNode(AUTHOR) {
   };
 }
 
-function articleSchema(a, AUTHOR) {
+function articleSchema(a, AUTHOR, hub) {
   const breadcrumb = {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Início", item: `${SITE}/` },
-      { "@type": "ListItem", position: 2, name: "AL com AI", item: `${SITE}/al-com-ai` },
+      { "@type": "ListItem", position: 2, name: hub.name, item: `${SITE}${hub.base}` },
       { "@type": "ListItem", position: 3, name: a.title, item: a.canonical },
     ],
   };
@@ -95,8 +95,8 @@ function articleSchema(a, AUTHOR) {
     publisher,
     mainEntityOfPage: { "@type": "WebPage", "@id": a.canonical },
     keywords: a.keywords.join(", "),
-    articleSection: "AL com AI",
-    isPartOf: { "@type": "Blog", "@id": `${SITE}/al-com-ai#blog`, name: "AL com AI" },
+    articleSection: hub.name,
+    isPartOf: { "@type": "Blog", "@id": `${SITE}${hub.base}#blog`, name: hub.name },
   };
   const faq = {
     "@type": "FAQPage",
@@ -111,20 +111,20 @@ function articleSchema(a, AUTHOR) {
   ];
 }
 
-function hubSchema(MANUAL, ARTICLES) {
+function hubSchema(MANUAL, ARTICLES, hub) {
   const breadcrumb = {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Início", item: `${SITE}/` },
-      { "@type": "ListItem", position: 2, name: "AL com AI", item: `${SITE}/al-com-ai` },
+      { "@type": "ListItem", position: 2, name: hub.name, item: `${SITE}${hub.base}` },
     ],
   };
   const blog = {
     "@type": "Blog",
-    "@id": `${SITE}/al-com-ai#blog`,
+    "@id": `${SITE}${hub.base}#blog`,
     name: MANUAL.title,
     description: MANUAL.description,
-    url: `${SITE}/al-com-ai`,
+    url: `${SITE}${hub.base}`,
     inLanguage: "pt-PT",
     publisher,
     blogPost: ARTICLES.map((a) => ({
@@ -159,6 +159,9 @@ try {
   const { ARTICLES, MANUAL, AUTHOR, MANUAL_ROUTES } = await server.ssrLoadModule(
     "/src/content/al-com-ai/index.js"
   );
+  const { GUIA_ARTICLES, GUIAS, GUIAS_ROUTES } = await server.ssrLoadModule(
+    "/src/content/guias/index.js"
+  );
 
   const template = readFileSync(indexPath, "utf-8");
   const renderBody = (path) => renderToString(React.createElement(Root, { path }));
@@ -168,33 +171,41 @@ try {
   writeFileSync(indexPath, withBody(template, renderBody("/")));
   let count = 1;
 
-  // Rotas de AL com AI — <head> e JSON-LD próprios por rota.
-  for (const route of MANUAL_ROUTES) {
-    const body = renderBody(route.path);
-    let head;
-    if (route.kind === "hub") {
-      head = buildHead(template, {
-        title: MANUAL.seoTitle,
-        description: MANUAL.description,
-        canonical: `${SITE}${MANUAL.path}`,
-        ogType: "website",
-        schema: hubSchema(MANUAL, ARTICLES),
-      });
-    } else {
-      const a = ARTICLES.find((x) => x.slug === route.slug);
-      head = buildHead(template, {
-        title: a.seoTitle,
-        description: a.description,
-        canonical: a.canonical,
-        ogType: "article",
-        schema: articleSchema(a, AUTHOR),
-      });
+  // Cada coleção (hub + artigos) — <head> e JSON-LD próprios por rota.
+  const collections = [
+    { META: MANUAL, ARTS: ARTICLES, ROUTES: MANUAL_ROUTES, hub: { name: "AL com AI", base: MANUAL.path } },
+    { META: GUIAS, ARTS: GUIA_ARTICLES, ROUTES: GUIAS_ROUTES, hub: { name: "Guias de alojamento local", base: GUIAS.path } },
+  ];
+  const rendered = [];
+  for (const { META, ARTS, ROUTES, hub } of collections) {
+    for (const route of ROUTES) {
+      const body = renderBody(route.path);
+      let head;
+      if (route.kind === "hub") {
+        head = buildHead(template, {
+          title: META.seoTitle,
+          description: META.description,
+          canonical: `${SITE}${META.path}`,
+          ogType: "website",
+          schema: hubSchema(META, ARTS, hub),
+        });
+      } else {
+        const a = ARTS.find((x) => x.slug === route.slug);
+        head = buildHead(template, {
+          title: a.seoTitle,
+          description: a.description,
+          canonical: a.canonical,
+          ogType: "article",
+          schema: articleSchema(a, AUTHOR, hub),
+        });
+      }
+      writeRoute(route.path, withBody(head, body));
+      rendered.push(route.path);
+      count++;
     }
-    writeRoute(route.path, withBody(head, body));
-    count++;
   }
 
-  console.log(`✓ Prerendered ${count} rotas (home + manual: ${MANUAL_ROUTES.map((r) => r.path).join(", ")})`);
+  console.log(`✓ Prerendered ${count} rotas (home + ${rendered.join(", ")})`);
 } finally {
   await server.close();
 }

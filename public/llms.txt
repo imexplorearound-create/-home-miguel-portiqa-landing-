@@ -11,6 +11,13 @@ Artigos práticos, sem hype, sobre inteligência artificial na gestão de alojam
 - [Automatizar a comunicação com hóspedes](https://portiqa.io/al-com-ai/comunicacao-com-hospedes): o que automatizar e o que manter sob supervisão humana; a regra dinheiro/conflito/emergência/reputação; human-in-the-loop; como medir.
 - [Gestão operacional no alojamento local](https://portiqa.io/al-com-ai/gestao-operacional-alojamento-local): porque a operação falha nas exceções e não no plano; porque o WhatsApp continua a ganhar e o problema de memória que cria; onde a AI acrescenta valor (ler o que saiu do plano) e os quatro níveis de autonomia; como medir coordenação real.
 
+## Guias de alojamento local
+
+Guias práticos e verificados sobre as regras do alojamento local em Portugal, escritos por um operador real (~20 apartamentos no Porto) e atualizados com a legislação em vigor.
+
+- [Registo de alojamento local (RNAL) em 2026](https://portiqa.io/guias/rnal-registo-alojamento-local): guia completo do registo — passo a passo no Balcão Único Eletrónico, documentos, prazos de oposição (60/90 dias), modalidades e limites (9 quartos/27 utentes), placa AL, seguro obrigatório de 75.000 €, zonas de contenção no Porto e em Lisboa, obrigações pós-registo (SIBA, taxa turística, IVA, Modelo 30) e coimas.
+- [Guias — índice](https://portiqa.io/guias): todos os guias publicados.
+
 ## Sobre
 
 - [Portiqa — página principal](https://portiqa.io/): visão geral do produto, os seis agentes de IA e o programa Founding 20.

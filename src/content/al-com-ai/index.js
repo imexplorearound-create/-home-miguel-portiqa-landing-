@@ -75,7 +75,7 @@ function wordCount(md) {
   return (stripFrontmatter(md).match(/\S+/g) || []).length;
 }
 
-function readingMinutes(md) {
+export function readingMinutes(md) {
   return Math.max(1, Math.round(wordCount(md) / 200));
 }
 
