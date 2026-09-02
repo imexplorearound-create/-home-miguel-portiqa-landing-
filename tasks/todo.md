@@ -6,11 +6,11 @@ Cauda longa embutida como H2/FAQ nos guias (nunca páginas finas).
 
 ## Guia 1 — RNAL (/guias/rnal-registo-alojamento-local)
 - [x] Keyword research (Ads: termos de pesquisa + Keyword Planner, 2026-09-02)
-- [ ] Dossier legal verificado (subagente com fontes oficiais)
-- [ ] Infra /guias: content/guias/index.js + manual.jsx parametrizado + main.jsx + prerender + sitemap + llms.txt
-- [ ] Guia escrito (master em ~/Marketing Portiqa/guias/, cópia no repo; TLDR + takeaways + FAQ; guardrail: sem fabricação, fontes oficiais)
-- [ ] Build + verificar dist (head/JSON-LD por rota; /al-com-ai intacto)
-- [ ] Commit no branch feat/guias-rnal — deploy só com OK do Miguel (vercel --prod)
+- [x] Dossier legal verificado (subagente, ~35 fontes, guia TdP jan-2025 íntegra)
+- [x] Infra /guias: content/guias/index.js + manual.jsx parametrizado + main.jsx + prerender + sitemap + llms.txt
+- [x] Guia escrito (master em ~/Marketing Portiqa/guias/; TLDR + 6 takeaways + 8 FAQ; fontes oficiais)
+- [x] Build verificado (8 rotas; FAQPage 8 Q; /al-com-ai byte-identical)
+- [x] Commit bca763a + PR #1 + preview Vercel — deploy prod só com OK do Miguel
 - [ ] Pós-deploy: request indexing GSC (precisa de service account no portiqa.io — pendente Miguel)
 
 ## Bloqueadores
