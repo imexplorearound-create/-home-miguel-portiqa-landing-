@@ -11,10 +11,10 @@ Cauda longa embutida como H2/FAQ nos guias (nunca páginas finas).
 - [x] Guia escrito (master em ~/Marketing Portiqa/guias/; TLDR + 6 takeaways + 8 FAQ; fontes oficiais)
 - [x] Build verificado (8 rotas; FAQPage 8 Q; /al-com-ai byte-identical)
 - [x] Commit bca763a + PR #1 + preview Vercel — deploy prod só com OK do Miguel
-- [ ] Pós-deploy: request indexing GSC (precisa de service account no portiqa.io — pendente Miguel)
+- [ ] Pós-deploy: request indexing GSC (service account OK desde 2026-09-02)
 
 ## Bloqueadores
-- GSC portiqa.io: Miguel ainda não adicionou seo-improver@api-web-site-489611.iam.gserviceaccount.com
+- [resolvido 2026-09-02] GSC portiqa.io: service account adicionado, acesso Completo confirmado; baseline: 1 clique / 8 impressões (jun-ago). Ver HANDOFF-SEO.md
 
 ## Depois
 - [ ] Guia 2 SIBA · Guia 3 seguro · cluster fiscal · comparativos
