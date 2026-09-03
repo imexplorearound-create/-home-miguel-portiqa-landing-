@@ -701,20 +701,18 @@ export function Footer() {
 function applyConsent({ analytics, marketing }) {
   if (typeof window === "undefined") return;
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: "consent_update",
+  // gtag('consent','update',...) — GTM only recognizes consent commands pushed
+  // as an `arguments` object (via gtag()), never as a plain array.
+  const gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  gtag("consent", "update", {
+    analytics_storage: analytics ? "granted" : "denied",
+    ad_storage: marketing ? "granted" : "denied",
+    ad_user_data: marketing ? "granted" : "denied",
+    ad_personalization: marketing ? "granted" : "denied",
   });
-  // gtag('consent','update',...) — emit raw command so GTM picks it up
-  window.dataLayer.push([
-    "consent",
-    "update",
-    {
-      analytics_storage: analytics ? "granted" : "denied",
-      ad_storage: marketing ? "granted" : "denied",
-      ad_user_data: marketing ? "granted" : "denied",
-      ad_personalization: marketing ? "granted" : "denied",
-    },
-  ]);
+  // Event AFTER the consent update, so GTM triggers keyed to it fire with the
+  // new consent state already in effect.
+  window.dataLayer.push({ event: "consent_update" });
   // Notify consent-gated integrations (e.g. Meta Pixel) so they can init the
   // moment marketing consent flips to granted. Denied → listeners no-op.
   window.dispatchEvent(
