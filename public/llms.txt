@@ -16,6 +16,7 @@ Artigos práticos, sem hype, sobre inteligência artificial na gestão de alojam
 Guias práticos e verificados sobre as regras do alojamento local em Portugal, escritos por um operador real (~20 apartamentos no Porto) e atualizados com a legislação em vigor.
 
 - [Registo de alojamento local (RNAL) em 2026](https://portiqa.io/guias/rnal-registo-alojamento-local): guia completo do registo — passo a passo no Balcão Único Eletrónico, documentos, prazos de oposição (60/90 dias), modalidades e limites (9 quartos/27 utentes), placa AL, seguro obrigatório de 75.000 €, zonas de contenção no Porto e em Lisboa, obrigações pós-registo (SIBA, taxa turística, IVA, Modelo 30) e coimas.
+- [SIBA: comunicar hóspedes estrangeiros em 2026](https://portiqa.io/guias/siba-comunicacao-hospedes): guia completo da comunicação de hóspedes — quem é obrigado, um boletim por hóspede estrangeiro (cidadãos da UE incluídos), prazos de 3 dias úteis na entrada e na saída, adesão ao SIBA (hoje UCFE/SSI, ex-SEF — não AIMA), três modos de envio (portal, ficheiro .DAT, web service via PMS), coimas do artigo 203.º e relação com RNAL e EES.
 - [Guias — índice](https://portiqa.io/guias): todos os guias publicados.
 
 ## Sobre

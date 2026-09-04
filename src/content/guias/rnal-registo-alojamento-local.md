@@ -105,7 +105,7 @@ O que custa dinheiro a sério é falhar depois do registo — as coimas estão n
 
 O registo é o princípio, não o fim. No dia a dia, um AL em Portugal tem estas obrigações permanentes:
 
-- **Comunicar hóspedes estrangeiros ao SIBA** ([siba.ssi.gov.pt](https://siba.ssi.gov.pt)): boletim de alojamento por cada hóspede estrangeiro (incluindo cidadãos da UE), **até 3 dias úteis depois da entrada e 3 dias úteis depois da saída**. As coimas por boletim em falta vão de 100 € a 2.000 €.
+- **Comunicar hóspedes estrangeiros ao SIBA** ([siba.ssi.gov.pt](https://siba.ssi.gov.pt)): boletim de alojamento por cada hóspede estrangeiro (incluindo cidadãos da UE), **até 3 dias úteis depois da entrada e 3 dias úteis depois da saída**. As coimas por boletim em falta vão de 100 € a 2.000 € — o processo completo está no nosso [guia do SIBA](/guias/siba-comunicacao-hospedes).
 - **INE**: se fores selecionado, resposta mensal obrigatória ao inquérito de permanência de hóspedes (IPHH), mesmo em meses sem hóspedes.
 - **Taxa turística**: no **Porto, 3 €** por hóspede e por noite (máximo 7 noites), com declaração na [plataforma da TMT](https://atividadeseconomicas.cm-porto.pt/alojamento-local/taxa-municipal-turistica-do-porto); em **Lisboa, 4 €** por noite (máximo 7 noites), com entrega até ao dia 25 do mês seguinte. Cobra-se ao hóspede e entrega-se à câmara — com isenções para menores e alguns casos especiais.
 - **Faturação**: fatura ou fatura-recibo por cada estadia. O alojamento é tributado à taxa reduzida de IVA (6% no continente), mas a maioria dos pequenos operadores está no **regime de isenção do artigo 53.º** — até **15.000 €** de volume de negócios anual. Se estiveres isento, as faturas têm de mencionar "IVA — regime de isenção".
