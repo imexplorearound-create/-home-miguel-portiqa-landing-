@@ -50,7 +50,13 @@
   </url>
   <url>
     <loc>https://portiqa.io/guias/rnal-registo-alojamento-local</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portiqa.io/guias/siba-comunicacao-hospedes</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
