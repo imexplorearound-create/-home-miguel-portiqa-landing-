@@ -29,7 +29,7 @@ const RAW = {
     description:
       "Como registar um alojamento local em 2026: passo a passo no Balcão Único, documentos, prazos, custos, zonas de contenção no Porto e em Lisboa, e coimas.",
     published: "2026-09-02",
-    updated: "2026-09-02",
+    updated: "2026-09-05",
     keywords: [
       "registo alojamento local",
       "rnal",
@@ -40,9 +40,9 @@ const RAW = {
       "alojamento local o que é",
     ],
     tldr:
-      "O registo de alojamento local (RNAL) faz-se online no Balcão Único Eletrónico, por comunicação prévia dirigida à câmara municipal, sem taxa nacional. A câmara tem 60 dias para se opor (90 em áreas de contenção); sem oposição, recebes o número de registo, obrigatório em toda a publicidade. Desde novembro de 2024 o registo não caduca nem precisa de renovação, e o condomínio só autoriza previamente no caso dos hostels. Antes de avançar, verifica se a tua freguesia aceita novos registos — no centro do Porto e de Lisboa várias estão fechadas — e prepara autorização de utilização, seguro de 75.000 € e requisitos de segurança.",
+      "O registo de alojamento local (RNAL) faz-se online no Balcão Único Eletrónico, por comunicação prévia dirigida à câmara municipal, sem taxa nacional — mas vários municípios cobram taxa própria na submissão (no Porto, 51,54 €). A câmara tem 60 dias para se opor (90 em áreas de contenção); sem oposição, recebes o número de registo, obrigatório em toda a publicidade. Desde novembro de 2024 o registo não caduca nem precisa de renovação, e o condomínio só autoriza previamente no caso dos hostels. Antes de avançar, verifica se a tua freguesia aceita novos registos — no centro do Porto e de Lisboa várias estão fechadas — e prepara autorização de utilização, seguro de 75.000 € e requisitos de segurança.",
     takeaways: [
-      "O registo é 100% online no Balcão Único Eletrónico (ePortugal), sem taxa nacional; a câmara tem 60 dias para se opor (90 em áreas de contenção) e pode fazer vistoria nesse prazo.",
+      "O registo é 100% online no Balcão Único Eletrónico (ePortugal), sem taxa nacional — mas atenção às taxas municipais, como os 51,54 € pagos na submissão no Porto; a câmara tem 60 dias para se opor (90 em áreas de contenção) e pode fazer vistoria nesse prazo.",
       "Desde o DL 76/2024: o registo tem duração indeterminada (não caduca nem se renova), o condomínio deixou de autorizar previamente (exceto hostels) e a transmissão do registo voltou a ser possível.",
       "Limites de capacidade: 9 quartos e 27 utentes (2 por quarto, +2 na sala em moradias e apartamentos); na modalidade quartos, máximo 3 na tua própria residência.",
       "Obrigatórios: placa AL junto à entrada, seguro de responsabilidade civil de 75.000 € (a falta é motivo de cancelamento do registo), extintor + manta + indicação do 112, livros de reclamações físico e eletrónico, e livro de informações em 4 línguas.",
@@ -56,7 +56,7 @@ const RAW = {
       },
       {
         q: "O condomínio pode impedir o meu alojamento local?",
-        a: "Não pode impedir à partida, exceto no caso dos hostels (que precisam de ata de autorização). Pode opor-se mais tarde, por deliberação de mais de metade da permilagem, com fundamento em perturbação reiterada e comprovada — e a decisão final cabe ao presidente da câmara. Pode ainda proibir o AL no regulamento por 2/3, mas só com efeitos para pedidos futuros.",
+        a: "Não pode impedir à partida, exceto no caso dos hostels (que precisam de ata de autorização). Pode opor-se mais tarde, por deliberação de mais de metade da permilagem, com fundamento em perturbação reiterada e comprovada — e a decisão final cabe ao presidente da câmara. Pode ainda proibir o AL no regulamento por 2/3, mas só com efeitos para pedidos de registo posteriores à deliberação — regra criada pelo DL 76/2024 e ainda em vigor: o DL 151/2026 não alterou o regime do condomínio.",
       },
       {
         q: "Quantos quartos e hóspedes posso ter num alojamento local?",
