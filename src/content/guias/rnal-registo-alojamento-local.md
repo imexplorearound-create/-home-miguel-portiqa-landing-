@@ -6,7 +6,7 @@ slug: "rnal-registo-alojamento-local"
 guia_number: 1
 status: "publicado"
 author: "Miguel Martins"
-last_updated: "2026-09-02"
+last_updated: "2026-09-05"
 primary_keyword: "registo alojamento local"
 secondary_keywords:
   - "rnal"
@@ -19,7 +19,7 @@ fontes_verificadas: "2026-09-02 — dossier com ~35 fontes; espinha dorsal: Guia
 
 # Registo de alojamento local (RNAL) em 2026: o guia completo
 
-Abrir um alojamento local em Portugal continua a ser, no essencial, um processo online e sem taxa nacional. Mas as regras mudaram várias vezes nos últimos três anos — e em 2026 voltaram a mudar. Este guia explica o processo todo, com as regras em vigor a setembro de 2026, verificadas no [guia oficial do Turismo de Portugal](https://business.turismodeportugal.pt/SiteCollectionDocuments/alojamento-local/guia-alojamento-local-jan-2025.pdf) e na legislação publicada.
+Abrir um alojamento local em Portugal continua a ser, no essencial, um processo online e sem taxa nacional — embora vários municípios, como o Porto, cobrem uma taxa municipal na submissão. Mas as regras mudaram várias vezes nos últimos três anos — e em 2026 voltaram a mudar. Este guia explica o processo todo, com as regras em vigor a setembro de 2026, verificadas no [guia oficial do Turismo de Portugal](https://business.turismodeportugal.pt/SiteCollectionDocuments/alojamento-local/guia-alojamento-local-jan-2025.pdf) e na legislação publicada.
 
 Escrevo isto como operador: gerimos cerca de 20 apartamentos de alojamento local no Porto. O que está aqui é o que fazemos na prática, não teoria.
 
@@ -56,7 +56,7 @@ E o condomínio? Desde o DL 76/2024, **só os hostels precisam de autorização 
 
 ## Como registar, passo a passo
 
-O registo faz-se exclusivamente no **Balcão Único Eletrónico** ([eportugal.gov.pt](https://eportugal.gov.pt), pesquisa por "alojamento local"), através de uma **comunicação prévia com prazo** dirigida ao presidente da câmara municipal. Não tem taxa nacional associada.
+O registo faz-se exclusivamente no **Balcão Único Eletrónico** ([eportugal.gov.pt](https://eportugal.gov.pt), pesquisa por "alojamento local"), através de uma **comunicação prévia com prazo** dirigida ao presidente da câmara municipal. Não tem taxa nacional associada — mas muitos municípios cobram uma taxa própria pela apreciação da comunicação prévia. No Porto são **51,54 €, pagos no momento da submissão, no próprio portal** (artigo 114.º, n.º 3, da Tabela de Taxas do Código Regulamentar do Município do Porto): sem o pagamento, o pedido não se conclui. Confirma sempre as taxas do teu município antes de submeter.
 
 O que vais preencher e anexar:
 
@@ -92,8 +92,9 @@ Falta ainda o **livro de informações** do estabelecimento (regras de funcionam
 
 ## Quanto custa abrir um alojamento local
 
-O registo em si não tem taxa nacional. Os custos reais de arranque são o equipamento e a conformidade:
+O registo em si não tem taxa nacional, mas soma-se-lhe a taxa municipal onde exista. Os custos reais de arranque são essa taxa, o equipamento e a conformidade:
 
+- Taxa municipal de apreciação da comunicação prévia (onde exista): no Porto, 51,54 € pagos na submissão — e eventual taxa de vistoria
 - Placa AL: ~30 €
 - Extintor + manta + kit primeiros socorros: 50–100 €
 - Seguro RC (75.000 €): tipicamente 100–200 €/ano, conforme seguradora e imóvel
