@@ -22,7 +22,12 @@ Cauda longa embutida como H2/FAQ nos guias (nunca páginas finas).
 - [x] Guia escrito (master em ~/Marketing Portiqa/guias/; TLDR + 6 takeaways + 8 FAQ; ~1.900 palavras)
 - [x] Entrada em src/content/guias/index.js + bullet no llms.txt + sitemap + interlink no guia 1
 - [x] Build verificado (sitemap 10 URLs; FAQPage 8 Q; páginas não tocadas idênticas exceto hash do bundle)
-- [ ] Branch + PR + preview — deploy prod só com OK do Miguel
+- [x] PR #2 revisto pelo Miguel (prazos clarificados), merged e LIVE 2026-09-05; sitemap resubmetido no GSC
+
+## Correções pós-revisão (2026-09-05)
+- [x] Guia RNAL: taxa municipal na submissão (Porto 51,54 €, art. 114.º/3 CRMP) — 4 comentários do Miguel verificados, PR #3 merged e live
+- [x] Regra 2/3 condomínio e regime de oposição verificados EM VIGOR (DL 151/2026 não alterou) — nota de vigência na FAQ
+- [ ] Miguel: \"Pedir indexação\" na UI do GSC para /guias/siba-comunicacao-hospedes (1 min, acelera dias)
 
 ## Depois
 - [ ] Guia 3 seguro · cluster fiscal · comparativos
