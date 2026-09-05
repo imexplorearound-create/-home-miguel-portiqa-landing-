@@ -56,12 +56,12 @@ As regras que importa saber (artigo 15.º da Lei 23/2007 e FAQ oficiais):
 
 ## Os prazos: 3 dias úteis — na entrada e na saída
 
-O artigo 16.º fixa dois prazos, e o segundo é o que mais gente falha:
+O artigo 16.º fixa dois prazos:
 
 - **3 dias úteis após a entrada** do hóspede — comunicar o boletim;
 - **3 dias úteis após a saída** — comunicar a saída.
 
-O prazo conta-se por dias inteiros, independentemente da hora do check-in ou do check-out. Na prática do portal, o boletim já inclui as datas de entrada e de saída — por isso, se comunicares a estadia completa à chegada, a saída fica tratada no mesmo boletim; só precisas de voltar lá se a data mudar (saída antecipada, extensão).
+Parece que são duas comunicações, mas na prática é quase sempre uma só: o boletim já inclui as datas de entrada e de saída, por isso, ao comunicares a estadia completa à chegada — é o que os PMS fazem automaticamente — os dois prazos ficam cumpridos de uma vez. O segundo só te obriga a voltar ao SIBA se a data de saída mudar (saída antecipada, extensão) ou se não a tiveres incluído no boletim. O prazo conta-se por dias inteiros, independentemente da hora do check-in ou do check-out.
 
 ## Como aderir ao SIBA, passo a passo
 
