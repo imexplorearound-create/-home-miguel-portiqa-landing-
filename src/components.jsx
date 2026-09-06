@@ -49,6 +49,7 @@ export function Nav() {
           <a href="/#compare">{t("nav.compare")}</a>
           <a href="/#founder">{t("nav.about")}</a>
           <a href="/al-com-ai">{t("nav.blog")}</a>
+          <a href="/guias">{t("nav.guias")}</a>
         </div>
         <div className="nav-right">
           <ThemeToggle />
@@ -674,6 +675,7 @@ export function Footer() {
           <a href="/#compare">{t("ft.product.compare")}</a>
           <a href="/#integrations">{t("ft.product.integrations")}</a>
           <a href="/al-com-ai">{t("ft.product.blog")}</a>
+          <a href="/guias">{t("ft.product.guias")}</a>
         </div>
         <div className="footer-col">
           <h4>{t("ft.company")}</h4>
