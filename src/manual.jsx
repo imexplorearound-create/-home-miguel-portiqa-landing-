@@ -15,6 +15,11 @@ export const AL_COLLECTION = {
   intro: MANUAL.intro,
   articles: ARTICLES,
   allText: "Ver todos os artigos de AL com AI →",
+  cross: {
+    href: GUIAS_BASE,
+    title: "Guias de alojamento local",
+    desc: "as regras do AL em Portugal, verificadas — registo RNAL, comunicação de hóspedes (SIBA) e mais.",
+  },
   soon: {
     title: "Mais artigos a caminho",
     desc:
@@ -30,6 +35,11 @@ export const GUIAS_COLLECTION = {
   intro: GUIAS.intro,
   articles: GUIA_ARTICLES,
   allText: "Ver todos os guias de alojamento local →",
+  cross: {
+    href: MANUAL_BASE,
+    title: "AL com AI",
+    desc: "o blog — inteligência artificial aplicada à gestão de alojamento local, sem hype.",
+  },
   soon: {
     title: "Mais guias a caminho",
     desc:
@@ -109,6 +119,12 @@ function Hub({ c }) {
             <p className="mn-card-desc">{c.soon.desc}</p>
           </li>
         </ol>
+
+        {c.cross && (
+          <p className="mn-hub-cross">
+            Ver também: <a href={c.cross.href}><strong>{c.cross.title}</strong></a> — {c.cross.desc}
+          </p>
+        )}
 
         <CtaFounding />
       </main>
