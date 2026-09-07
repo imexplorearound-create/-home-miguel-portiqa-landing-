@@ -22,9 +22,10 @@ Deps: `react`, `react-dom`, `marked`. Dev: `vite`, `@vitejs/plugin-react`.
 ## Blog "AL com AI" — como adicionar um artigo
 Conteúdo em `src/content/al-com-ai/`:
 1. Colocar o `.md` (do master em `~/Marketing Portiqa/blog-al-com-ai/`) na pasta.
-2. Em `index.js`, juntar entrada em `RAW` (slug → `{ spoke, md, title, seoTitle, description, keywords[], published, updated, tldr, takeaways[], faq[{q,a}] }`). O corpo é o `.md` **verbatim**: `renderMarkdown()` remove frontmatter + 1º H1, reaponta CTAs `/founding-20`+`/kit-*` → `/#signup`, e injeta `id` nos headings.
-3. Acrescentar a URL a **`public/sitemap.xml`** (e, se relevante, `public/llms.txt`).
-4. `npm run build` e verificar `dist/al-com-ai/<slug>/index.html` (corpo em HTML + `<head>`/JSON-LD).
+2. **Correr o skill `no-ai-slop` no `.md` (modo edição) antes de o meter no manifest** e registar a data no frontmatter (`no_ai_slop: "YYYY-MM-DD"`). Vale para blog E guias, sem exceção.
+3. Em `index.js`, juntar entrada em `RAW` (slug → `{ spoke, md, title, seoTitle, description, keywords[], published, updated, tldr, takeaways[], faq[{q,a}] }`). O corpo é o `.md` **verbatim**: `renderMarkdown()` remove frontmatter + 1º H1, reaponta CTAs `/founding-20`+`/kit-*` → `/#signup`, e injeta `id` nos headings.
+4. Acrescentar a URL a **`public/sitemap.xml`** (e, se relevante, `public/llms.txt`).
+5. `npm run build` e verificar `dist/al-com-ai/<slug>/index.html` (corpo em HTML + `<head>`/JSON-LD).
 Regra: **marca "AL com AI", nunca "manual"/"capítulo"**. Conteúdo SEO/GEO **sem fabricação** — só evidência real (prova first-party Vibrant).
 
 ## Mapa de ficheiros
@@ -36,6 +37,7 @@ Regra: **marca "AL com AI", nunca "manual"/"capítulo"**. Conteúdo SEO/GEO **se
 - `index.html` — GTM `GTM-T9HW7B9K` + GA4 (Consent Mode v2) + Meta Pixel `1800304264271258` + OG + JSON-LD Organization/SoftwareApplication.
 
 ## Não partir
+- **Todo o artigo novo ou alterado (blog `al-com-ai/` e `guias/`) passa pelo skill `no-ai-slop` antes do build/deploy.** Sem passagem registada no frontmatter, não publicar.
 - **Home intacta** ao mexer no blog (mudanças aditivas). Diff mínimo.
 - Âncoras na chrome partilhada (Nav/Footer/AnnouncementBar) são **`/#seccao`** (funcionam a partir das páginas do blog).
 - Assets em caminhos **absolutos** (`/assets/...`) — funcionam em rotas aninhadas.
