@@ -4,6 +4,7 @@
 import { renderMarkdown, readingMinutes } from "../al-com-ai/index.js";
 import rnalMd from "./rnal-registo-alojamento-local.md?raw";
 import sibaMd from "./siba-comunicacao-hospedes.md?raw";
+import seguroMd from "./seguro-alojamento-local.md?raw";
 
 export const SITE = "https://portiqa.io";
 export const GUIAS_BASE = "/guias";
@@ -144,6 +145,69 @@ const RAW = {
       {
         q: "O que acontece se me esquecer de comunicar ou comunicar fora do prazo?",
         a: "É contraordenação do artigo 203.º da Lei 23/2007: coima de 100 € a 500 € até 10 boletins em falta, 200 € a 900 € de 11 a 50, e 400 € a 2.000 € acima disso. Se for apenas atraso por negligência, os limites descem para um quarto. O sistema cruza os boletins com o Schengen — em 2025 gerou mais de 2.400 comunicações às autoridades policiais.",
+      },
+    ],
+  },
+  "seguro-alojamento-local": {
+    guia: 3,
+    md: seguroMd,
+    title: "Seguro de alojamento local em 2026: o que é obrigatório, quanto custa e como submeter",
+    seoTitle: "Seguro de alojamento local em 2026: regras, preços e gov.pt",
+    description:
+      "Seguro de alojamento local em 2026: o que a lei obriga (RC de 75.000 € e incêndio), o que cobre e não cobre, quanto custa, como entregar o comprovativo no gov.pt e o que arriscas sem ele.",
+    published: "2026-09-09",
+    updated: "2026-09-09",
+    keywords: [
+      "seguro alojamento local",
+      "seguro responsabilidade civil alojamento local",
+      "seguro alojamento local preço",
+      "submeter seguro alojamento local",
+      "seguro alojamento local obrigatório",
+      "seguro para airbnb",
+      "aircover o que é",
+    ],
+    tldr:
+      "A lei obriga o alojamento local a dois seguros: responsabilidade civil extracontratual com capital mínimo de 75.000 € por estabelecimento e por sinistro (artigo 13.º-A do DL 128/2014 e Portaria 248/2021) e, em propriedade horizontal, prova de seguro de incêndio da fração, que pode ser o do condomínio. O seguro de habitação normal não serve, porque exclui atividade comercial no imóvel. A RC custa entre 45 € e 80 € por ano num apartamento; o multirriscos completo, 150 € a 350 €. O comprovativo da RC entrega-se no gov.pt ao receber o número RNAL, em cada renovação e em 3 dias sempre que a câmara o pedir. Sem ele, a câmara pode cancelar o registo (foi assim que Lisboa cancelou 6.765 registos em 2026) e aplicar coima de 650 € a 1.500 € a pessoas singulares. O AirCover do Airbnb e o seguro da Booking não substituem a apólice.",
+    takeaways: [
+      "São dois seguros, não um: responsabilidade civil extracontratual de 75.000 € por estabelecimento e por sinistro (submete-se no gov.pt) e, em prédios em propriedade horizontal, prova de seguro de incêndio da fração, que pode ser o do condomínio.",
+      "A RC obrigatória cobre danos a hóspedes e terceiros (lesões, inundação do vizinho, partes comuns). Não cobre danos ao teu imóvel, furto nem perda de rendimento: para isso é preciso multirriscos AL.",
+      "O multirriscos habitação não cumpre a lei: as condições gerais excluem atividade comercial ou lucrativa no imóvel, e explorar AL sem avisar a seguradora é agravamento de risco que reduz ou anula a indemnização.",
+      "Preços reais: RC de 75.000 € entre 45 € e 80 € por ano num apartamento (Allianz 67,37 €, Ageas desde 79,50 €, mediadores desde 44 €); 150.000 € à volta de 120 €; multirriscos completo 150 € a 350 €.",
+      "Entrega no gov.pt com Chave Móvel Digital, um pedido por número RNAL: ao receber o registo, em cada renovação, em 10 dias se mudares de apólice e em 3 dias sempre que a câmara pedir. A validade fica pública no RNAL.",
+      "Sem seguro válido ou sem comprovativo: cancelamento do registo pelo presidente da câmara após audiência prévia (mais de 10.000 registos cancelados em Portugal até junho de 2026) e coima de 650 € a 1.500 € para singulares, 1.700 € a 24.000 € para empresas. AirCover e Booking não contam.",
+    ],
+    faq: [
+      {
+        q: "O seguro de alojamento local é obrigatório?",
+        a: "Sim, desde outubro de 2018. O artigo 13.º-A do DL 128/2014 obriga o titular da exploração a manter um seguro de responsabilidade civil extracontratual com capital mínimo de 75.000 € por estabelecimento e por sinistro, e, em propriedade horizontal, a ter ou provar um seguro de incêndio da fração. Desde o DL 76/2024 a validade do seguro é pública no RNAL e a falta dele é motivo de cancelamento do registo.",
+      },
+      {
+        q: "Quanto custa o seguro de alojamento local?",
+        a: "A responsabilidade civil obrigatória de 75.000 € custa entre 45 € e 80 € por ano num apartamento: a Allianz publica 67,37 € sem franquia, a Ageas anuncia desde 79,50 € com assistência e os mediadores online partem de 44 €. Para 150.000 € de capital, cerca de 120 €. Um multirriscos completo de AL (edifício, recheio e RC) anda entre 150 € e 350 € por ano, mas nenhuma seguradora publica tabela: é por simulação.",
+      },
+      {
+        q: "Onde e como se submete o seguro do alojamento local?",
+        a: "Só no serviço «Entregar comprovativo de seguro do Alojamento Local» do gov.pt, com Chave Móvel Digital ou Cartão de Cidadão. Introduzes o número RNAL, os dados da apólice (seguradora, número, datas) e carregas o PDF. É um pedido por número RNAL e recebes um e-mail de confirmação da AMA. Não se envia por e-mail à câmara nem pelo Balcão Único.",
+      },
+      {
+        q: "Quando tenho de voltar a submeter o seguro?",
+        a: "Sempre que renovares a apólice ou mudares de seguradora; se a apólice é anual, na prática é uma vez por ano. Se o contrato cessar sem cessares a atividade, tens 10 dias para comunicar a nova apólice. E sempre que a câmara pedir prova, tens 3 dias. A lei diz «três dias», sem «úteis», por isso conta com dias corridos.",
+      },
+      {
+        q: "O meu seguro multirriscos habitação serve para o alojamento local?",
+        a: "Não. As condições gerais dos multirriscos habitação (Fidelidade, Generali e outras) excluem da responsabilidade civil os danos ligados a atividade comercial ou lucrativa no imóvel e definem a casa como «destinada exclusivamente a habitação». Além disso, explorar AL sem comunicar à seguradora é agravamento do risco, e num sinistro a indemnização pode ser reduzida ou recusada.",
+      },
+      {
+        q: "O AirCover do Airbnb substitui o seguro obrigatório?",
+        a: "Não. A Proteção contra danos do AirCover (até 3 milhões de dólares) «não é um contrato de seguro», segundo os próprios termos, e o seguro de responsabilidade civil para anfitriões (1 milhão de dólares) só cobre estadias reservadas no Airbnb e não é uma apólice em teu nome com o teu RNAL. O Airbnb escreve que o AirCover «não substitui um seguro pessoal» e que em Portugal a RC é obrigatória. O mesmo vale para o seguro de responsabilidade civil gratuito da Booking.",
+      },
+      {
+        q: "O que acontece se não tiver seguro ou não submeter o comprovativo?",
+        a: "Duas coisas. O presidente da câmara pode cancelar o registo, depois de audiência prévia, o que cessa a exploração de imediato e leva à remoção dos anúncios nas plataformas; em zonas de contenção o registo perdido não volta. E é contraordenação grave: coima de 650 € a 1.500 € para pessoas singulares e de 1.700 € a 24.000 € para empresas, conforme a dimensão.",
+      },
+      {
+        q: "Tenho vários apartamentos: preciso de uma apólice por cada um?",
+        a: "Podes ter uma apólice única, desde que identifique todos os números RNAL e garanta 75.000 € por estabelecimento e por sinistro. A submissão no gov.pt continua a ser uma por número RNAL, com o mesmo PDF. A partir de 25 licenças há tarifas de frota (Allianz) e a apólice de grupo da ALEP cobra 39 € por AL adicional.",
       },
     ],
   },
